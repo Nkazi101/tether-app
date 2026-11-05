@@ -1,5 +1,5 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Tether",
+  "description": "A web app for tracing structural parallels between current events and history.",
   "requestFramePermissions": []
 }

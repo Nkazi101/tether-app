@@ -1,0 +1,39 @@
+name: Validate Tether
+permissions:
+  contents: read
+on:
+  push:
+  pull_request:
+jobs:
+  application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - name: Production startup and API smoke
+        run: |
+          npm start > /tmp/tether.log 2>&1 &
+          for attempt in $(seq 1 20); do
+            if curl --fail http://127.0.0.1:3000/api/health/live; then break; fi
+            sleep 1
+          done
+          curl --fail http://127.0.0.1:3000/api/health/live
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:3000/api/health/ready)" = 503
+          curl --fail http://127.0.0.1:3000/explore
+      - run: npm audit --omit=dev --audit-level=high
+  database:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 2.109.1
+      - run: supabase start -x studio,imgproxy,edge-runtime,logflare,vector,supavisor
+      - run: supabase db query --local --file supabase/tests/living_comparisons.sql
+      - if: always()
+        run: supabase stop --no-backup

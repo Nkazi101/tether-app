@@ -1,158 +1,161 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
-import { ArrowRight, ExternalLink, BookOpen, Layers, Sparkles } from 'lucide-react';
-import { fetchDynamicCollections, CollectionData } from '../lib/gemini';
+import React, { useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import {
+  EditorialImage,
+  PageHeading,
+  LoadingState,
+  EmptyState,
+  TetherMark,
+} from "../components/Editorial";
+import { useCollectionsQuery } from "../lib/queries";
+import { appRoutes } from "../lib/routes";
 
 export function Collections() {
-  const [collectionData, setCollectionData] = useState<CollectionData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    async function loadData() {
-      try {
-        setIsLoading(true);
-        setError(null);
-        const data = await fetchDynamicCollections();
-        setCollectionData(data);
-      } catch (err) {
-        console.error("Failed to load collections data:", err);
-        setError("Failed to load collections. Please try again later.");
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    loadData();
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="max-w-[1400px] mx-auto px-6 pt-32 pb-32 flex flex-col items-center justify-center opacity-50">
-        <Sparkles className="animate-pulse text-secondary mb-4" size={32} />
-        <p className="font-headline italic text-xl">Synthesizing global knowledge graph...</p>
-      </div>
-    );
-  }
-
-  if (error || !collectionData) {
-    return (
-      <div className="max-w-[1400px] mx-auto px-6 pt-32 pb-32 flex flex-col items-center justify-center">
-        <p className="font-headline italic text-xl text-red-500 mb-4">{error || "Failed to load data."}</p>
-        <button 
-          onClick={() => window.location.reload()}
-          className="px-6 py-2 bg-[#1A2B3C] text-white text-[10px] font-bold tracking-widest uppercase rounded-sm"
-        >
-          Retry
-        </button>
-      </div>
-    );
-  }
-
+  const query = useCollectionsQuery();
+  const [filter, setFilter] = useState("All");
+  const volumesRef = useRef<HTMLDivElement>(null);
+  const data = query.data;
+  const volumes = useMemo(
+    () =>
+      data?.volumes.filter(
+        (volume) =>
+          filter === "All" ||
+          volume.title.toLowerCase().includes(filter.toLowerCase()) ||
+          volume.events.some(
+            (event) => event.tag.toLowerCase() === filter.toLowerCase(),
+          ),
+      ) || [],
+    [data, filter],
+  );
+  const explorePath = (title: string) =>
+    `${appRoutes.explore}?q=${encodeURIComponent(title)}`;
   return (
-    <div className="max-w-[1400px] mx-auto px-6 pt-12 pb-32">
-      {/* Featured Section */}
-      <section className="flex flex-col lg:flex-row gap-16 items-center mb-24">
-        <div className="lg:w-1/2">
-          <div className="inline-block bg-[#8B6F5C] text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 mb-6">
-            Featured Parallel
-          </div>
-          <h1 className="font-headline italic text-6xl md:text-8xl text-primary leading-[0.9] mb-8">
-            {collectionData.featured.title.split(' ').slice(0, 2).join(' ')}<br />
-            {collectionData.featured.title.split(' ').slice(2).join(' ')}
-          </h1>
-          <p className="text-on-surface-variant text-lg leading-relaxed mb-10 max-w-md">
-            {collectionData.featured.description}
-          </p>
-          <button className="bg-[#1A2B3C] text-white px-6 py-3 text-[10px] font-bold tracking-widest uppercase flex items-center gap-2 hover:opacity-90 transition-opacity">
-            Open Archive <ArrowRight size={14} />
-          </button>
-        </div>
-        <div className="lg:w-1/2 relative">
-          <div className="aspect-[4/5] overflow-hidden bg-surface-container">
-            <img 
-              src={collectionData.featured.imageUrl} 
-              alt={collectionData.featured.title} 
-              className="w-full h-full object-cover grayscale opacity-80"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
-              <h3 className="text-white font-headline italic text-2xl">{collectionData.featured.volumeName}</h3>
+    <div className="page-wrap">
+      <PageHeading
+        eyebrow="The collections"
+        title={
+          <>
+            Ideas worth
+            <br />
+            <em>spending time with.</em>
+          </>
+        }
+        description="Thematic reading through the archive. Follow an idea across eras, events, and different ways of seeing."
+      />
+      {query.isLoading ? (
+        <LoadingState label="Taking the volumes off the shelf…" />
+      ) : query.isError || !data ? (
+        <EmptyState
+          title="The collections are unavailable for a moment."
+          description="Try again, or explore the archive with a question of your own."
+          action="Try again"
+          onAction={() => void query.refetch()}
+        />
+      ) : (
+        <>
+          <section className="collection-feature">
+            <div className="collection-feature-copy">
+              <p className="eyebrow">From the reading desk</p>
+              <h2>{data.volumes[0]?.title || data.featured.title}</h2>
+              <p>{data.volumes[0]?.description || data.featured.description}</p>
+              <button
+                className="text-link"
+                onClick={() =>
+                  volumesRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  })
+                }
+              >
+                Browse the collection <ArrowRight size={16} />
+              </button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Filters */}
-      <section className="flex flex-wrap gap-3 mb-16">
-        {collectionData.filters.map((filter, i) => (
-          <button 
-            key={filter}
-            className={`px-5 py-2 text-[10px] font-bold tracking-widest uppercase rounded-full transition-colors ${
-              i === 0 
-                ? 'bg-[#1A2B3C] text-white' 
-                : 'bg-[#F2F1ED] text-outline hover:bg-[#EAE9E4]'
-            }`}
+            <figure>
+              <EditorialImage
+                src="/images/reading-room.jpg"
+                alt="Books arranged on the shelves of a library"
+                eager
+              />
+              <figcaption className="collection-photo-credit">
+                A world of ideas, waiting to connect. · Photo via Unsplash
+              </figcaption>
+            </figure>
+          </section>
+          <section
+            className="collection-filters"
+            aria-label="Collection topics"
           >
-            {filter}
-          </button>
-        ))}
-      </section>
-
-      {/* Volumes Section */}
-      {collectionData.volumes.map((volume, vIndex) => (
-        <section key={vIndex} className="mb-24">
-          <div className="flex items-end justify-between mb-8 border-b border-outline-variant/20 pb-4">
-            <div>
-              <h2 className="font-headline italic text-4xl text-primary mb-2">{volume.title}</h2>
-              <p className="text-sm text-on-surface-variant">{volume.description}</p>
+            <div className="topic-list">
+              {Array.from(new Set(["All", ...data.filters])).map((value) => (
+                <button
+                  key={value}
+                  aria-pressed={filter === value}
+                  onClick={() => setFilter(value)}
+                >
+                  {value}
+                </button>
+              ))}
             </div>
-            <button className="text-[10px] font-bold tracking-widest uppercase text-[#8B6F5C] flex items-center gap-1 hover:opacity-80 transition-opacity">
-              View Volume <ExternalLink size={12} />
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {volume.events.map((item, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="aspect-square overflow-hidden mb-4 bg-surface-container">
-                  <img 
-                    src={item.imageUrl} 
-                    alt={item.title}
-                    className="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
-                  />
+          </section>
+          <div ref={volumesRef}>
+            {volumes.map((volume, index) => (
+              <section className="collection-volume" key={volume.title}>
+                <div className="section-heading">
+                  <div>
+                    <p className="eyebrow">
+                      Volume {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h2>{volume.title}</h2>
+                    <p>{volume.description}</p>
+                  </div>
+                  <span>{volume.events.length} archive entries</span>
                 </div>
-                <div className="text-[9px] font-bold tracking-widest uppercase text-[#8B6F5C] mb-2">{item.tag}</div>
-                <h3 className="font-headline italic text-2xl text-primary mb-2 leading-tight">{item.title}</h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">{item.description}</p>
-              </div>
+                <div className="volume-grid">
+                  {volume.events.map((item, i) => (
+                    <Link
+                      key={`${item.title}-${i}`}
+                      className="volume-story"
+                      to={explorePath(item.title)}
+                    >
+                      <div className="archive-entry-era">
+                        <span>{item.tag.replaceAll("-", "–")}</span>
+                        <TetherMark />
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <span className="text-link">
+                        Explore the historical context{" "}
+                        <ArrowUpRight size={14} />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
             ))}
+            {volumes.length === 0 && (
+              <EmptyState
+                title="This shelf is still growing."
+                description="There are no volumes for this topic yet. Explore the rest of the collection."
+                action="Show all collections"
+                onAction={() => setFilter("All")}
+              />
+            )}
           </div>
-        </section>
-      ))}
-
-      {/* Newsletter Section */}
-      <section className="bg-[#F8F7F5] py-24 px-6 text-center rounded-sm">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-[10px] font-bold tracking-widest uppercase text-[#8B6F5C] mb-6">The Weekly Echo</div>
-          <h2 className="font-headline italic text-4xl md:text-5xl text-primary mb-12 leading-tight">
-            Receive the archive in your<br />private correspondence.
-          </h2>
-          <div className="flex items-center border-b border-outline-variant/30 pb-2 mb-6 max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="YOUR@EMAIL.COM" 
-              className="w-full bg-transparent border-none focus:ring-0 text-xs font-bold tracking-widest uppercase placeholder:text-outline/50 text-primary outline-none"
-            />
-            <button className="text-[10px] font-bold tracking-widest uppercase text-primary hover:text-[#8B6F5C] transition-colors whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-[9px] font-bold tracking-widest uppercase text-outline">
-            Minimalist frequency. Historical depth. No clutter.
-          </p>
-        </div>
-      </section>
+          <section className="collection-endnote">
+            <div>
+              <h2>A question of your own?</h2>
+              <p>
+                The archive is a starting point. Follow the connection that
+                interests you.
+              </p>
+            </div>
+            <Link className="button-secondary" to={appRoutes.explore}>
+              Explore the archive <ArrowRight size={16} />
+            </Link>
+          </section>
+        </>
+      )}
     </div>
   );
 }

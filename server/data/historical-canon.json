@@ -1,0 +1,4056 @@
+[
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "England"
+        ],
+        "domains": [
+          "politics",
+          "world"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "magna-carta-1215",
+        "title": "Rebellion, negotiation and the first Magna Carta",
+        "period": "1215",
+        "startYear": 1215,
+        "endYear": 1215,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Barons challenged King John’s rule and negotiated written limits on his authority.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "The dispute concerned taxation, legal protections and the balance of power between the king and his barons.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "john",
+            "name": "King John",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "barons",
+            "name": "barons",
+            "aliases": [],
+            "kind": "group",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "london",
+            "name": "control of London",
+            "kind": "authority",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "May 1215",
+            "summary": "The barons renounced allegiance to King John after negotiations failed.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "May 1215",
+            "summary": "The barons seized London, increasing pressure on the king.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "15 June 1215",
+            "summary": "King John accepted a charter negotiated with the barons at Runnymede.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-3"
+            ]
+          },
+          {
+            "id": "b4",
+            "when": "Later in 1215",
+            "summary": "John disowned the written settlement rather than resolving the dispute permanently.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-2"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "barons",
+            "predicate": "challenges",
+            "to": "john",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "barons",
+            "predicate": "controls",
+            "to": "london",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "john",
+            "predicate": "agrees",
+            "to": "barons",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-3"
+            ]
+          },
+          {
+            "id": "r4-1",
+            "beatId": "b4",
+            "from": "john",
+            "predicate": "defies",
+            "to": "barons",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-2"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "John disowned the written settlement rather than resolving the dispute permanently.",
+            "anchorIds": [
+              "a2-2"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:magna-carta-1215:1",
+            "passage": "publicly renounced their homage to King John"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:magna-carta-1215:1",
+            "passage": "When the barons seized London"
+          },
+          {
+            "id": "a1-3",
+            "sourceId": "canon:magna-carta-1215:1",
+            "passage": "King John accepted the terms that would become Magna Carta"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:magna-carta-1215:2",
+            "passage": "a group of barons rebelled against King John"
+          },
+          {
+            "id": "a2-2",
+            "sourceId": "canon:magna-carta-1215:2",
+            "passage": "King John quickly disowned these written rights"
+          }
+        ]
+      },
+      "id": "canon:magna-carta-1215",
+      "version": "episode3:d504cf36b8e9a5d699a6804b",
+      "title": "Rebellion, negotiation and the first Magna Carta",
+      "period": "1215",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Barons challenged King John’s rule and negotiated written limits on his authority.",
+      "sequence": [
+        {
+          "stage": "May 1215",
+          "description": "The barons renounced allegiance to King John after negotiations failed.",
+          "sourceIds": [
+            "canon:magna-carta-1215:1"
+          ]
+        },
+        {
+          "stage": "May 1215",
+          "description": "The barons seized London, increasing pressure on the king.",
+          "sourceIds": [
+            "canon:magna-carta-1215:1"
+          ]
+        },
+        {
+          "stage": "15 June 1215",
+          "description": "King John accepted a charter negotiated with the barons at Runnymede.",
+          "sourceIds": [
+            "canon:magna-carta-1215:1"
+          ]
+        },
+        {
+          "stage": "Later in 1215",
+          "description": "John disowned the written settlement rather than resolving the dispute permanently.",
+          "sourceIds": [
+            "canon:magna-carta-1215:2"
+          ]
+        }
+      ],
+      "outcome": "John disowned the written settlement rather than resolving the dispute permanently.",
+      "boundaries": [
+        "The charter protected particular medieval groups, not equal political rights for everyone.",
+        "A concession can be signed without being durably enforced."
+      ],
+      "sources": [
+        {
+          "id": "canon:magna-carta-1215:1",
+          "title": "Magna Carta: Muse and Mentor Rebellion and the Great Charter",
+          "url": "https://www.loc.gov/exhibits/magna-carta-muse-and-mentor/rebellion-and-the-great-charter.html",
+          "publisher": "loc.gov",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:13:23.578Z",
+          "summary": "Agent-authored source audit summary. The Library of Congress describes King John and the barons negotiating unsuccessfully in January 1215. In May the barons renounced allegiance, John ordered their castles seized, and the barons seized London. They negotiated at Runnymede, where John accepted the charter on 15 June. The barons later renewed allegiance. This was a settlement between powerful elites, not universal suffrage.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "publicly renounced their homage to King John",
+            "When the barons seized London",
+            "King John accepted the terms that would become Magna Carta"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Source text was programmatically retrieved and its excerpts checked. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:magna-carta-1215:2",
+          "title": "Magna Carta: Collection highlights",
+          "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
+          "publisher": "nationalarchives.gov.uk",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:13:23.348Z",
+          "summary": "Agent-authored source audit summary. The National Archives presents royal correspondence and describes the 1215 rebellion and agreement. King John later disowned the written rights; the immediate settlement did not settle the conflict permanently.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "a group of barons rebelled against King John",
+            "King John quickly disowned these written rights"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Source text was programmatically retrieved and its excerpts checked. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "Middle East",
+          "North America",
+          "Europe"
+        ],
+        "domains": [
+          "business",
+          "world"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "oil-embargo-1973",
+        "title": "Oil exporters restrict supply to gain diplomatic leverage",
+        "period": "1973–1974",
+        "startYear": 1973,
+        "endYear": 1974,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Arab oil exporters restricted supply to countries supporting Israel during the 1973 war.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "Import-dependent economies faced higher costs and constrained diplomatic choices.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "exporters",
+            "name": "Arab oil exporters",
+            "aliases": [],
+            "kind": "group",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "us",
+            "name": "United States",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "nixon",
+            "name": "Nixon administration",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "oil",
+            "name": "oil exports",
+            "kind": "capacity",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "energy-plan",
+            "name": "domestic energy programme",
+            "kind": "authority",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "October 1973",
+            "summary": "Arab oil exporters withheld exports from the United States and other targeted countries.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "November 1973",
+            "summary": "The Nixon administration adopted a domestic energy-independence programme.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "1973–1974",
+            "summary": "The United States negotiated with exporters while pursuing Middle East diplomacy.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b4",
+            "when": "March 1974",
+            "summary": "The embargo ended, although the economic pressures had several causes.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-3"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "exporters",
+            "predicate": "withholds",
+            "to": "oil",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "nixon",
+            "predicate": "adopts",
+            "to": "energy-plan",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "us",
+            "predicate": "negotiates",
+            "to": "exporters",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r4-1",
+            "beatId": "b4",
+            "from": "exporters",
+            "predicate": "restores",
+            "to": "oil",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-3"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "The embargo ended, although the economic pressures had several causes.",
+            "anchorIds": [
+              "a1-3"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:oil-embargo-1973:1",
+            "passage": "imposed an embargo against the United States"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:oil-embargo-1973:1",
+            "passage": "announced Project Independence to promote domestic energy independence"
+          },
+          {
+            "id": "a1-3",
+            "sourceId": "canon:oil-embargo-1973:1",
+            "passage": "lift the embargo in March 1974"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:oil-embargo-1973:2",
+            "passage": "the oil embargo of 1973"
+          }
+        ]
+      },
+      "id": "canon:oil-embargo-1973",
+      "version": "episode3:69f08787ad59f5f008a20974",
+      "title": "Oil exporters restrict supply to gain diplomatic leverage",
+      "period": "1973–1974",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Arab oil exporters restricted supply to countries supporting Israel during the 1973 war.",
+      "sequence": [
+        {
+          "stage": "October 1973",
+          "description": "Arab oil exporters withheld exports from the United States and other targeted countries.",
+          "sourceIds": [
+            "canon:oil-embargo-1973:1"
+          ]
+        },
+        {
+          "stage": "November 1973",
+          "description": "The Nixon administration adopted a domestic energy-independence programme.",
+          "sourceIds": [
+            "canon:oil-embargo-1973:1"
+          ]
+        },
+        {
+          "stage": "1973–1974",
+          "description": "The United States negotiated with exporters while pursuing Middle East diplomacy.",
+          "sourceIds": [
+            "canon:oil-embargo-1973:1"
+          ]
+        },
+        {
+          "stage": "March 1974",
+          "description": "The embargo ended, although the economic pressures had several causes.",
+          "sourceIds": [
+            "canon:oil-embargo-1973:1"
+          ]
+        }
+      ],
+      "outcome": "The embargo ended, although the economic pressures had several causes.",
+      "boundaries": [
+        "The embargo was deliberate leverage; many supply failures have different causes.",
+        "Inflation cannot be attributed to the embargo alone."
+      ],
+      "sources": [
+        {
+          "id": "canon:oil-embargo-1973:1",
+          "title": "Oil Embargo, 1973–1974",
+          "url": "https://history.state.gov/milestones/1969-1976/oil-embargo",
+          "publisher": "history.state.gov",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:13:22.812Z",
+          "summary": "Agent-authored source audit summary. The Office of the Historian describes Arab oil exporters imposing an embargo on the United States and other countries in 1973. The Nixon administration announced Project Independence, coordinated with consumers and negotiated with producing states. The embargo ended in March 1974. Military aid, diplomacy, prior price negotiations and import dependence all mattered.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "imposed an embargo against the United States",
+            "announced Project Independence to promote domestic energy independence",
+            "lift the embargo in March 1974"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Source text was programmatically retrieved and its excerpts checked. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:oil-embargo-1973:2",
+          "title": "Oil Shock of 1973-74",
+          "url": "https://www.federalreservehistory.org/essays/oil-shock-of-1973-74",
+          "publisher": "federalreservehistory.org",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:13:23.316Z",
+          "summary": "Agent-authored source audit summary. Federal Reserve History analyses the 1973–74 supply shock and inflation. Higher prices also reflected currency changes and broader conditions. The United States depended on imported oil; the embargo was one contributor, not a complete explanation of the decade’s inflation.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "the oil embargo of 1973"
+          ],
+          "historicalProvenance": {
+            "role": "original-analysis",
+            "note": "Source text was programmatically retrieved and its excerpts checked. original analysis; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "United States"
+        ],
+        "domains": [
+          "business"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "bank-holiday-1933",
+        "title": "A bank run is interrupted by a nationwide closure",
+        "period": "1933",
+        "startYear": 1933,
+        "endYear": 1933,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Bank failures and withdrawals put pressure on the American banking system before a national holiday.",
+          "anchorIds": [
+            "a1-2"
+          ]
+        },
+        "stakes": {
+          "text": "Depositors needed access to their money while authorities sought to stabilise the system.",
+          "anchorIds": [
+            "a1-2"
+          ]
+        },
+        "actors": [
+          {
+            "id": "roosevelt",
+            "name": "Roosevelt",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "depositors",
+            "name": "depositors",
+            "aliases": [],
+            "kind": "group",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "banks",
+            "name": "banks",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a2-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "deposits",
+            "name": "bank deposits",
+            "kind": "money",
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "banking",
+            "name": "banking transactions",
+            "kind": "access",
+            "anchorIds": [
+              "a1-2"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "Early March 1933",
+            "summary": "Depositors and currency holders withdrew funds as pressure on banks grew.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "6 March 1933",
+            "summary": "Roosevelt suspended banking transactions across the country.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "March 1933",
+            "summary": "Banks reopened after the emergency legislative and licensing response.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "depositors",
+            "predicate": "removes",
+            "to": "deposits",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "r1-2",
+            "beatId": "b1",
+            "from": "banks",
+            "predicate": "controls",
+            "to": "banking",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "roosevelt",
+            "predicate": "restricts",
+            "to": "banking",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "banks",
+            "predicate": "restores",
+            "to": "banking",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "Banks reopened after the emergency legislative and licensing response.",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:bank-holiday-1933:1",
+            "passage": "ordering the suspension of all banking transactions"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:bank-holiday-1933:1",
+            "passage": "were redeeming dollars at an alarming rate"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:bank-holiday-1933:2",
+            "passage": "the banks began to reopen"
+          }
+        ]
+      },
+      "id": "canon:bank-holiday-1933",
+      "version": "episode3:891095efab80cd598f70afc9",
+      "title": "A bank run is interrupted by a nationwide closure",
+      "period": "1933",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Bank failures and withdrawals put pressure on the American banking system before a national holiday.",
+      "sequence": [
+        {
+          "stage": "Early March 1933",
+          "description": "Depositors and currency holders withdrew funds as pressure on banks grew.",
+          "sourceIds": [
+            "canon:bank-holiday-1933:1"
+          ]
+        },
+        {
+          "stage": "6 March 1933",
+          "description": "Roosevelt suspended banking transactions across the country.",
+          "sourceIds": [
+            "canon:bank-holiday-1933:1"
+          ]
+        },
+        {
+          "stage": "March 1933",
+          "description": "Banks reopened after the emergency legislative and licensing response.",
+          "sourceIds": [
+            "canon:bank-holiday-1933:2"
+          ]
+        }
+      ],
+      "outcome": "Banks reopened after the emergency legislative and licensing response.",
+      "boundaries": [
+        "A national banking system differs from a single company or exchange.",
+        "Closure itself does not establish that institutions are solvent or that losses will be repaid."
+      ],
+      "sources": [
+        {
+          "id": "canon:bank-holiday-1933:1",
+          "title": "Bank Holiday of 1933",
+          "url": "https://www.federalreservehistory.org/essays/bank-holiday-of-1933",
+          "publisher": "federalreservehistory.org",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:13:26.242Z",
+          "summary": "Agent-authored source audit summary. Federal Reserve History describes withdrawals and gold redemptions preceding the bank holiday. President Roosevelt suspended banking transactions on 6 March 1933 while officials prepared emergency legislation. Depositors could not withdraw, transfer or deposit funds during the closure.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "ordering the suspension of all banking transactions",
+            "were redeeming dollars at an alarming rate"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Source text was programmatically retrieved and its excerpts checked. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:bank-holiday-1933:2",
+          "title": "Research Guides: This Month in Business History: 1933 Bank Holiday",
+          "url": "https://guides.loc.gov/this-month-in-business-history/march/1933-bank-holiday",
+          "publisher": "guides.loc.gov",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:17:00.955Z",
+          "summary": "Agent-authored source audit summary. The Library of Congress reproduces licensing instructions and describes the 1933 national bank holiday, emergency banking legislation and the subsequent reopening of licensed banks. Depositors, banks and Roosevelt’s government were participants in a system-wide stabilisation process.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "the banks began to reopen"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Source text was programmatically retrieved and its excerpts checked. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "United States"
+        ],
+        "domains": [
+          "politics",
+          "lifestyle"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "montgomery-boycott-1955",
+        "title": "A transport boycott combines economic pressure with a court challenge",
+        "period": "1955–1956",
+        "startYear": 1955,
+        "endYear": 1956,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Black residents challenged segregated bus service through a boycott and litigation.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "Access to public transport and equal treatment were at stake.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "residents",
+            "name": "Black residents",
+            "aliases": [],
+            "kind": "group",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "company",
+            "name": "bus company",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "plaintiffs",
+            "name": "plaintiffs",
+            "aliases": [],
+            "kind": "group",
+            "anchorIds": [
+              "a2-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "court",
+            "name": "Supreme Court",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a2-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "fares",
+            "name": "bus fares",
+            "kind": "money",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "segregation",
+            "name": "segregated bus rules",
+            "kind": "authority",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "December 1955",
+            "summary": "Black residents withheld bus fares by boycotting the segregated service.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "During the boycott",
+            "summary": "Organisers negotiated with the bus company while residents maintained the boycott.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "1956",
+            "summary": "The plaintiffs challenged segregation laws in the federal courts.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b4",
+            "when": "November–December 1956",
+            "summary": "The Supreme Court affirmed the ruling against segregation; the boycott ended after implementation.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-2"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "residents",
+            "predicate": "withholds",
+            "to": "fares",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "residents",
+            "predicate": "negotiates",
+            "to": "company",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "plaintiffs",
+            "predicate": "challenges",
+            "to": "company",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r4-1",
+            "beatId": "b4",
+            "from": "court",
+            "predicate": "overrides",
+            "to": "company",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-2"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "The Supreme Court affirmed the ruling against segregation; the boycott ended after implementation.",
+            "anchorIds": [
+              "a2-2"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:montgomery-boycott-1955:1",
+            "passage": "boycott and negotiate with the bus company"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:montgomery-boycott-1955:1",
+            "passage": "the Supreme Court ruled Alabama's bus segregation laws unconstitutional"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:montgomery-boycott-1955:2",
+            "passage": "challenged the Alabama state statutes"
+          },
+          {
+            "id": "a2-2",
+            "sourceId": "canon:montgomery-boycott-1955:2",
+            "passage": "voted to end the 381-day Montgomery bus boycott"
+          }
+        ]
+      },
+      "id": "canon:montgomery-boycott-1955",
+      "version": "episode3:0097bf70f8b0d318522a182f",
+      "title": "A transport boycott combines economic pressure with a court challenge",
+      "period": "1955–1956",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Black residents challenged segregated bus service through a boycott and litigation.",
+      "sequence": [
+        {
+          "stage": "December 1955",
+          "description": "Black residents withheld bus fares by boycotting the segregated service.",
+          "sourceIds": [
+            "canon:montgomery-boycott-1955:1"
+          ]
+        },
+        {
+          "stage": "During the boycott",
+          "description": "Organisers negotiated with the bus company while residents maintained the boycott.",
+          "sourceIds": [
+            "canon:montgomery-boycott-1955:1"
+          ]
+        },
+        {
+          "stage": "1956",
+          "description": "The plaintiffs challenged segregation laws in the federal courts.",
+          "sourceIds": [
+            "canon:montgomery-boycott-1955:2"
+          ]
+        },
+        {
+          "stage": "November–December 1956",
+          "description": "The Supreme Court affirmed the ruling against segregation; the boycott ended after implementation.",
+          "sourceIds": [
+            "canon:montgomery-boycott-1955:2"
+          ]
+        }
+      ],
+      "outcome": "The Supreme Court affirmed the ruling against segregation; the boycott ended after implementation.",
+      "boundaries": [
+        "Boycott pressure and a successful constitutional case worked together.",
+        "A commercial dispute without a comparable legal right may follow a different path."
+      ],
+      "sources": [
+        {
+          "id": "canon:montgomery-boycott-1955:1",
+          "title": "The Montgomery Bus Boycott (U.S. National Park Service)",
+          "url": "https://www.nps.gov/articles/montgomery-bus-boycott.htm",
+          "publisher": "nps.gov",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:13:23.517Z",
+          "summary": "Agent-authored source audit summary. The National Park Service documents the Montgomery boycott after Rosa Parks’s arrest. Black residents withheld their custom; organisers negotiated with the bus company, while litigation challenged segregation. The bus company desegregated after the federal courts ruled against the laws.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "boycott and negotiate with the bus company",
+            "the Supreme Court ruled Alabama's bus segregation laws unconstitutional"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Source text was programmatically retrieved and its excerpts checked. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:montgomery-boycott-1955:2",
+          "title": "Browder v. Gayle, 352 U.S. 903",
+          "url": "https://kinginstitute.stanford.edu/browder-v-gayle-352-us-903",
+          "publisher": "kinginstitute.stanford.edu",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:13:23.852Z",
+          "summary": "Agent-authored source audit summary. Stanford’s King Institute documents the plaintiffs in Browder v. Gayle, the federal district court ruling and Supreme Court affirmation. The boycott continued until the ruling could be implemented; leaders ended it on 20 December 1956.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "challenged the Alabama state statutes",
+            "voted to end the 381-day Montgomery bus boycott"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Source text was programmatically retrieved and its excerpts checked. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "Poland"
+        ],
+        "domains": [
+          "politics",
+          "business"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "gdansk-solidarity-1980",
+        "title": "Striking workers insist on organisation rights beyond a pay offer",
+        "period": "1980–1981",
+        "startYear": 1980,
+        "endYear": 1981,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Polish strikers demanded independent organisation as well as economic concessions.",
+          "anchorIds": [
+            "a2-1"
+          ]
+        },
+        "stakes": {
+          "text": "Workers’ ability to organise independently was disputed by the state.",
+          "anchorIds": [
+            "a2-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "workers",
+            "name": "workers",
+            "aliases": [],
+            "kind": "group",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "government",
+            "name": "government",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "solidarity",
+            "name": "Solidarity",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "work",
+            "name": "shipyard work",
+            "kind": "work",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "union",
+            "name": "independent union activity",
+            "kind": "access",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "August 1980",
+            "summary": "Workers withheld shipyard work and demanded independent trade unions.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "August 1980",
+            "summary": "The government offered pay concessions, but workers continued pressing for organisational rights.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "31 August 1980",
+            "summary": "The government accepted concessions that enabled independent union organisation.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b4",
+            "when": "December 1981",
+            "summary": "The government suspended Solidarity’s activities under martial law.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-2"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "workers",
+            "predicate": "withholds",
+            "to": "work",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "workers",
+            "predicate": "challenges",
+            "to": "government",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "government",
+            "predicate": "agrees",
+            "to": "workers",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r4-1",
+            "beatId": "b4",
+            "from": "government",
+            "predicate": "restricts",
+            "to": "union",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-2"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "The government suspended Solidarity’s activities under martial law.",
+            "anchorIds": [
+              "a2-2"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:gdansk-solidarity-1980:1",
+            "passage": "the government keenly agreed to significant pay increases for workers but this time the strike did not stop"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:gdansk-solidarity-1980:1",
+            "passage": "it was outlawed as a direct result of the introduction of martial law"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:gdansk-solidarity-1980:2",
+            "passage": "Lech Walesa led a strike"
+          },
+          {
+            "id": "a2-2",
+            "sourceId": "canon:gdansk-solidarity-1980:2",
+            "passage": "the government suspended the activities of Solidarnosc"
+          }
+        ]
+      },
+      "id": "canon:gdansk-solidarity-1980",
+      "version": "episode3:59ea050fdfd8a68a3322f4fd",
+      "title": "Striking workers insist on organisation rights beyond a pay offer",
+      "period": "1980–1981",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Polish strikers demanded independent organisation as well as economic concessions.",
+      "sequence": [
+        {
+          "stage": "August 1980",
+          "description": "Workers withheld shipyard work and demanded independent trade unions.",
+          "sourceIds": [
+            "canon:gdansk-solidarity-1980:2"
+          ]
+        },
+        {
+          "stage": "August 1980",
+          "description": "The government offered pay concessions, but workers continued pressing for organisational rights.",
+          "sourceIds": [
+            "canon:gdansk-solidarity-1980:1"
+          ]
+        },
+        {
+          "stage": "31 August 1980",
+          "description": "The government accepted concessions that enabled independent union organisation.",
+          "sourceIds": [
+            "canon:gdansk-solidarity-1980:1"
+          ]
+        },
+        {
+          "stage": "December 1981",
+          "description": "The government suspended Solidarity’s activities under martial law.",
+          "sourceIds": [
+            "canon:gdansk-solidarity-1980:2"
+          ]
+        }
+      ],
+      "outcome": "The government suspended Solidarity’s activities under martial law.",
+      "boundaries": [
+        "The state was both political ruler and a central actor in employment.",
+        "An agreement’s implementation and its later reversal are distinct events."
+      ],
+      "sources": [
+        {
+          "id": "canon:gdansk-solidarity-1980:1",
+          "title": "Twenty-One Demands, Gdañsk, August 1980. The birth of the SOLIDARITY",
+          "url": "https://www.unesco.org/en/memory-world/twenty-one-demands-gdansk-august-1980-birth-solidarity-trades-union-massive-social-movement",
+          "publisher": "unesco.org",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:13:25.961Z",
+          "summary": "Agent-authored source audit summary. UNESCO describes the August 1980 Gdansk Strike Committee’s demands for free unions, an end to censorship and release of political prisoners. The government offered pay increases, but workers maintained their strike. Acceptance of demands enabled Solidarity; martial law outlawed its activity in 1981. This account accompanies the preserved demands.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "the government keenly agreed to significant pay increases for workers but this time the strike did not stop",
+            "it was outlawed as a direct result of the introduction of martial law"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Source text was programmatically retrieved and its excerpts checked. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:gdansk-solidarity-1980:2",
+          "title": "The ILO and the story of Solidarnosc",
+          "url": "https://www.ilo.org/resource/article/ilo-and-story-solidarnosc",
+          "publisher": "International Labour Organization",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:17:01.147Z",
+          "summary": "Agent-authored source audit summary. The ILO documents its involvement with Polish freedom-of-association proceedings. Lech Walesa led a strike in Gdansk in 1980; Solidarity was founded and then suppressed under martial law in 1981. The later 1989 negotiations are outside this bounded episode.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "Lech Walesa led a strike",
+            "the government suspended the activities of Solidarnosc"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Read through the research browser; programmatic access was incomplete. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "United Kingdom"
+        ],
+        "domains": [
+          "entertainment",
+          "politics"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "pjs-privacy-2016",
+        "title": "A celebrity’s appeal preserves anonymity while privacy is contested",
+        "period": "2016",
+        "startYear": 2016,
+        "endYear": 2016,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "PJS sought to stop a newspaper publishing private information while courts considered the competing rights.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "Publication could expose the family before the privacy dispute reached trial.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "pjs",
+            "name": "PJS",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "publisher",
+            "name": "News Group Newspapers",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "courts",
+            "name": "English courts",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "plan",
+            "name": "proposed publication notice",
+            "kind": "information",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "story",
+            "name": "private story publication",
+            "kind": "information",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "January 2016: notice",
+            "summary": "News Group Newspapers notified PJS of its intention to publish a private story.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "January 2016: application",
+            "summary": "PJS challenged publication and requested protection from the English courts.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "January 2016: interim appeal",
+            "summary": "After the High Court refused interim relief, the Court of Appeal temporarily restricted publication.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b4",
+            "when": "May 2016: further appeal",
+            "summary": "The Supreme Court continued the interim restriction pending trial, despite earlier overseas disclosure.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-3"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "publisher",
+            "predicate": "discloses",
+            "to": "plan",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "pjs",
+            "predicate": "challenges",
+            "to": "publisher",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "r2-2",
+            "beatId": "b2",
+            "from": "pjs",
+            "predicate": "requests",
+            "to": "courts",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "courts",
+            "predicate": "restricts",
+            "to": "story",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r4-1",
+            "beatId": "b4",
+            "from": "courts",
+            "predicate": "protects",
+            "to": "pjs",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-3"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "The Supreme Court continued the interim restriction pending trial, despite earlier overseas disclosure.",
+            "anchorIds": [
+              "a1-3"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:pjs-privacy-2016:1",
+            "passage": "editor notified PJS that he proposed to publish"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:pjs-privacy-2016:1",
+            "passage": "applied for an interim injunction"
+          },
+          {
+            "id": "a1-3",
+            "sourceId": "canon:pjs-privacy-2016:1",
+            "passage": "the interim injunction continued until trial or further order"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:pjs-privacy-2016:2",
+            "passage": "the court of appeal granted PJS an interim injunction"
+          }
+        ]
+      },
+      "id": "canon:pjs-privacy-2016",
+      "version": "episode3:1747b6182916231b05948e86",
+      "title": "A celebrity’s appeal preserves anonymity while privacy is contested",
+      "period": "2016",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "PJS sought to stop a newspaper publishing private information while courts considered the competing rights.",
+      "sequence": [
+        {
+          "stage": "January 2016: notice",
+          "description": "News Group Newspapers notified PJS of its intention to publish a private story.",
+          "sourceIds": [
+            "canon:pjs-privacy-2016:1"
+          ]
+        },
+        {
+          "stage": "January 2016: application",
+          "description": "PJS challenged publication and requested protection from the English courts.",
+          "sourceIds": [
+            "canon:pjs-privacy-2016:1"
+          ]
+        },
+        {
+          "stage": "January 2016: interim appeal",
+          "description": "After the High Court refused interim relief, the Court of Appeal temporarily restricted publication.",
+          "sourceIds": [
+            "canon:pjs-privacy-2016:2"
+          ]
+        },
+        {
+          "stage": "May 2016: further appeal",
+          "description": "The Supreme Court continued the interim restriction pending trial, despite earlier overseas disclosure.",
+          "sourceIds": [
+            "canon:pjs-privacy-2016:1"
+          ]
+        }
+      ],
+      "outcome": "The Supreme Court continued the interim restriction pending trial, despite earlier overseas disclosure.",
+      "boundaries": [
+        "The later ruling relied on the particular privacy evidence and the family’s interests.",
+        "An interim injunction preserves a position; it does not resolve every issue at trial.",
+        "The historical judiciary is grouped as English courts; the visible sequence names the different court levels. A present first-instance stay is not a Supreme Court ruling."
+      ],
+      "sources": [
+        {
+          "id": "canon:pjs-privacy-2016:1",
+          "title": "uksc_2016_0080_judgment_b2c5ea3fe4.pdf",
+          "url": "https://supremecourt.uk/uploads/uksc_2016_0080_judgment_b2c5ea3fe4.pdf",
+          "publisher": "supremecourt.uk",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:17:52.849Z",
+          "summary": "Agent-authored source audit summary. The Supreme Court judgment records that PJS applied to restrain News Group Newspapers. The High Court refused interim relief; the Court of Appeal granted it. After overseas disclosure, the Court of Appeal lifted it. The Supreme Court continued the interim injunction pending trial, distinguishing further intrusion from information already being known. The English courts are represented collectively here; the High Court, Court of Appeal and Supreme Court made different decisions at different stages.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "editor notified PJS that he proposed to publish",
+            "applied for an interim injunction",
+            "the interim injunction continued until trial or further order"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Source text was programmatically retrieved and its excerpts checked. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:pjs-privacy-2016:2",
+          "title": "Supreme court upholds 'celebrity threesome' injunction",
+          "url": "https://www.theguardian.com/law/2016/may/19/supreme-court-upholds-celebrity-threesome-injunction",
+          "publisher": "theguardian.com",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:16:59.350Z",
+          "summary": "Agent-authored source audit summary. Contemporaneous reporting records an initial refusal and appeal.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "the court of appeal granted PJS an interim injunction"
+          ],
+          "historicalProvenance": {
+            "role": "original-reporting",
+            "note": "Source text was programmatically retrieved and its excerpts checked. original reporting; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "United States"
+        ],
+        "domains": [
+          "business",
+          "lifestyle",
+          "technology"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "best-buy-reorganisation-2013",
+        "title": "Cost cutting is followed by tighter control of remote work",
+        "period": "2012–2013",
+        "startYear": 2012,
+        "endYear": 2013,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Best Buy paired a cost-cutting programme with a change in who could decide where employees worked.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "Head-office roles and employees’ discretion over remote work were affected.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "company",
+            "name": "Best Buy",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "joly",
+            "name": "Hubert Joly",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "plan",
+            "name": "cost-cutting plan",
+            "kind": "information",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "roles",
+            "name": "headquarters staff roles",
+            "kind": "work",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "November 2012",
+            "temporalBasis": "announced",
+            "summary": "Hubert Joly announced a cost-cutting plan for Best Buy.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "February 2013",
+            "temporalBasis": "announced",
+            "summary": "Best Buy announced 400 headquarters job cuts as part of the programme.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "March 2013",
+            "temporalBasis": "announced",
+            "summary": "Best Buy made remote-working arrangements subject to manager discussion instead of employee discretion alone.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "joly",
+            "predicate": "discloses",
+            "to": "plan",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r1-2",
+            "beatId": "b1",
+            "from": "joly",
+            "predicate": "controls",
+            "to": "company",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "company",
+            "predicate": "removes",
+            "to": "roles",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "company",
+            "predicate": "restricts",
+            "to": "roles",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "Best Buy made remote-working arrangements subject to manager discussion instead of employee discretion alone.",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:best-buy-reorganisation-2013:1",
+            "passage": "new CEO Hubert Joly announced in November"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:best-buy-reorganisation-2013:1",
+            "passage": "cutting 400 jobs at its headquarters"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:best-buy-reorganisation-2013:2",
+            "passage": "whether that decision can be made by them alone, or in consultation with their managers"
+          }
+        ]
+      },
+      "id": "canon:best-buy-reorganisation-2013",
+      "version": "episode3:f44723ffde8e56b2bc6aac60",
+      "title": "Cost cutting is followed by tighter control of remote work",
+      "period": "2012–2013",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Best Buy paired a cost-cutting programme with a change in who could decide where employees worked.",
+      "sequence": [
+        {
+          "stage": "November 2012",
+          "description": "Hubert Joly announced a cost-cutting plan for Best Buy.",
+          "sourceIds": [
+            "canon:best-buy-reorganisation-2013:1"
+          ]
+        },
+        {
+          "stage": "February 2013",
+          "description": "Best Buy announced 400 headquarters job cuts as part of the programme.",
+          "sourceIds": [
+            "canon:best-buy-reorganisation-2013:1"
+          ]
+        },
+        {
+          "stage": "March 2013",
+          "description": "Best Buy made remote-working arrangements subject to manager discussion instead of employee discretion alone.",
+          "sourceIds": [
+            "canon:best-buy-reorganisation-2013:2"
+          ]
+        }
+      ],
+      "outcome": "Best Buy made remote-working arrangements subject to manager discussion instead of employee discretion alone.",
+      "boundaries": [
+        "Best Buy did not announce an outright ban on all remote work.",
+        "The evidence does not show that changing office attendance caused business recovery."
+      ],
+      "sources": [
+        {
+          "id": "canon:best-buy-reorganisation-2013:1",
+          "title": "Best Buy to cut 400 jobs at headquarters",
+          "url": "https://www.cbsnews.com/news/best-buy-to-cut-400-jobs-at-headquarters/",
+          "publisher": "cbsnews.com",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:17:02.250Z",
+          "summary": "Agent-authored source audit summary. AP reported Best Buy’s headquarters job cuts in February 2013, following CEO Hubert Joly’s November cost-cutting plan.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "new CEO Hubert Joly announced in November",
+            "cutting 400 jobs at its headquarters"
+          ],
+          "historicalProvenance": {
+            "role": "original-reporting",
+            "note": "Source text was programmatically retrieved and its excerpts checked. original reporting; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:best-buy-reorganisation-2013:2",
+          "title": "Best Buy Follows Yahoo's Lead, Takes a Look at Employees Working From Home",
+          "url": "https://abcnews.com/Business/best-buy-yahoo-questions-telecommuting/story?id=18666891",
+          "publisher": "abcnews.com",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:17:02.040Z",
+          "summary": "Agent-authored source audit summary. ABC News reported in March 2013 that Best Buy changed remote-work decisions. Its spokesperson said the company was not eliminating telecommuting outright: employees needed to discuss arrangements with managers rather than decide alone. The report separately discusses Yahoo; that company is not merged into this case.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "whether that decision can be made by them alone, or in consultation with their managers"
+          ],
+          "historicalProvenance": {
+            "role": "original-reporting",
+            "note": "Source text was programmatically retrieved and its excerpts checked. original reporting; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "Ancient Greece",
+          "Sicily"
+        ],
+        "domains": [
+          "world",
+          "politics"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "athens-sicily-415",
+        "title": "A warning about an expedition is answered with a larger commitment",
+        "period": "415 BCE",
+        "startYear": -415,
+        "endYear": -415,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Athenians debated a Sicilian expedition; Nicias’s attempt to discourage it was followed by a larger commitment.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "The assembly was choosing the scale and risks of an overseas campaign.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "assembly",
+            "name": "Athenians",
+            "aliases": [],
+            "kind": "group",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "nicias",
+            "name": "Nicias",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "alcibiades",
+            "name": "Alcibiades",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "fleet",
+            "name": "expeditionary fleet",
+            "kind": "capacity",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "415 BCE: debate",
+            "summary": "Nicias challenged the proposed expedition before the Athenian assembly.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "415 BCE: debate",
+            "summary": "Alcibiades supported the expedition against Nicias’s objections.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "415 BCE: force request",
+            "summary": "Nicias requested a much larger force rather than accepting the original plan.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b4",
+            "when": "415 BCE: decision",
+            "summary": "The Athenians adopted the larger expeditionary commitment.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "nicias",
+            "predicate": "challenges",
+            "to": "assembly",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "alcibiades",
+            "predicate": "supports",
+            "to": "assembly",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "nicias",
+            "predicate": "requests",
+            "to": "fleet",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r4-1",
+            "beatId": "b4",
+            "from": "assembly",
+            "predicate": "adopts",
+            "to": "fleet",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "The Athenians adopted the larger expeditionary commitment.",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:athens-sicily-415:1",
+            "passage": "the Athenians resolved to sail again to Sicily"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:athens-sicily-415:1",
+            "passage": "By far the warmest advocate of the expedition was, however, Alcibiades"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:athens-sicily-415:2",
+            "passage": "He then decided to trick the Athenians into not going anyway"
+          }
+        ]
+      },
+      "id": "canon:athens-sicily-415",
+      "version": "episode3:84515703d6a62f45089b6c88",
+      "title": "A warning about an expedition is answered with a larger commitment",
+      "period": "415 BCE",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Athenians debated a Sicilian expedition; Nicias’s attempt to discourage it was followed by a larger commitment.",
+      "sequence": [
+        {
+          "stage": "415 BCE: debate",
+          "description": "Nicias challenged the proposed expedition before the Athenian assembly.",
+          "sourceIds": [
+            "canon:athens-sicily-415:1"
+          ]
+        },
+        {
+          "stage": "415 BCE: debate",
+          "description": "Alcibiades supported the expedition against Nicias’s objections.",
+          "sourceIds": [
+            "canon:athens-sicily-415:1"
+          ]
+        },
+        {
+          "stage": "415 BCE: force request",
+          "description": "Nicias requested a much larger force rather than accepting the original plan.",
+          "sourceIds": [
+            "canon:athens-sicily-415:2"
+          ]
+        },
+        {
+          "stage": "415 BCE: decision",
+          "description": "The Athenians adopted the larger expeditionary commitment.",
+          "sourceIds": [
+            "canon:athens-sicily-415:2"
+          ]
+        }
+      ],
+      "outcome": "The Athenians adopted the larger expeditionary commitment.",
+      "boundaries": [
+        "The speeches are reconstructed ancient accounts and their interpretation is contested.",
+        "The later military defeat is not used to prove that every warning was correct at the time."
+      ],
+      "sources": [
+        {
+          "id": "canon:athens-sicily-415:1",
+          "title": "The Internet Classics Archive | The History of the Peloponnesian War by Thucydides",
+          "url": "https://classics.mit.edu/Thucydides/pelopwar.6.sixth.html",
+          "publisher": "classics.mit.edu",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:18:30.988Z",
+          "summary": "Agent-authored source audit summary. Thucydides describes the Athenians debating a Sicilian expedition. Alcibiades backed the proposal. Nicias warned against it and later described the much larger force he believed necessary. The assembly increased its commitment rather than cancelling the venture. The speeches are an ancient author’s reconstruction, not verbatim transcripts.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "the Athenians resolved to sail again to Sicily",
+            "By far the warmest advocate of the expedition was, however, Alcibiades"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Read through the research browser; programmatic access was incomplete. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:athens-sicily-415:2",
+          "title": "Donald Kagan on the Sicilian expedition and Nicias",
+          "url": "https://oyc.yale.edu/classics/clcv-205/lecture-20",
+          "publisher": "Open Yale Courses",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. Historian Donald Kagan discusses Nicias’s unsuccessful attempt to deter the Athenians by proposing a larger force. His lecture explicitly offers a different evaluation of Athenian decision-making from Thucydides. It is scholarly interpretation drawing on the ancient account, not independent contemporary corroboration.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "He then decided to trick the Athenians into not going anyway"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Read through the research browser; programmatic access was incomplete. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "Austria",
+          "Hungary"
+        ],
+        "domains": [
+          "health",
+          "science"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "semmelweis-handwashing-1847",
+        "title": "Comparing wards leads to a change in clinical practice",
+        "period": "1847–1848",
+        "startYear": 1847,
+        "endYear": 1848,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Semmelweis investigated unequal mortality between maternity wards and introduced chlorine handwashing.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "The safety of patients depended on clinical routines whose effects were being investigated.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "doctor",
+            "name": "Semmelweis",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "clinicians",
+            "name": "clinicians",
+            "aliases": [],
+            "kind": "group",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "evidence",
+            "name": "ward mortality evidence",
+            "kind": "information",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "washing",
+            "name": "chlorine handwashing procedure",
+            "kind": "capacity",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "1847: investigation",
+            "summary": "Semmelweis investigated mortality differences between the maternity wards.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "1847: procedure change",
+            "summary": "Semmelweis instructed clinicians to use a chlorine handwashing procedure.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "1847: implementation",
+            "summary": "Clinicians applied the handwashing procedure in the affected ward.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b4",
+            "when": "1847–1848: findings",
+            "summary": "Semmelweis presented evidence linking contaminated hands to childbed fever.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "doctor",
+            "predicate": "investigates",
+            "to": "evidence",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "doctor",
+            "predicate": "requests",
+            "to": "clinicians",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "clinicians",
+            "predicate": "adopts",
+            "to": "washing",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r4-1",
+            "beatId": "b4",
+            "from": "doctor",
+            "predicate": "discloses",
+            "to": "evidence",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "Semmelweis presented evidence linking contaminated hands to childbed fever.",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:semmelweis-handwashing-1847:1",
+            "passage": "introduction of chlorine washing of the male clinicians’ hands"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:semmelweis-handwashing-1847:2",
+            "passage": "Semmelweis presented evidence that childbed fever was spread"
+          }
+        ]
+      },
+      "id": "canon:semmelweis-handwashing-1847",
+      "version": "episode3:4d7aa17c934821e6125f92f2",
+      "title": "Comparing wards leads to a change in clinical practice",
+      "period": "1847–1848",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Semmelweis investigated unequal mortality between maternity wards and introduced chlorine handwashing.",
+      "sequence": [
+        {
+          "stage": "1847: investigation",
+          "description": "Semmelweis investigated mortality differences between the maternity wards.",
+          "sourceIds": [
+            "canon:semmelweis-handwashing-1847:1"
+          ]
+        },
+        {
+          "stage": "1847: procedure change",
+          "description": "Semmelweis instructed clinicians to use a chlorine handwashing procedure.",
+          "sourceIds": [
+            "canon:semmelweis-handwashing-1847:1"
+          ]
+        },
+        {
+          "stage": "1847: implementation",
+          "description": "Clinicians applied the handwashing procedure in the affected ward.",
+          "sourceIds": [
+            "canon:semmelweis-handwashing-1847:1"
+          ]
+        },
+        {
+          "stage": "1847–1848: findings",
+          "description": "Semmelweis presented evidence linking contaminated hands to childbed fever.",
+          "sourceIds": [
+            "canon:semmelweis-handwashing-1847:2"
+          ]
+        }
+      ],
+      "outcome": "Semmelweis presented evidence linking contaminated hands to childbed fever.",
+      "boundaries": [
+        "Historical observational comparisons have limitations and should not be represented as randomised trials.",
+        "The case does not establish that every disputed new idea is correct."
+      ],
+      "sources": [
+        {
+          "id": "canon:semmelweis-handwashing-1847:1",
+          "title": "Semmelweis and the aetiology of puerperal sepsis: historical analysis",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2870773/",
+          "publisher": "Epidemiology and Infection",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. A historical study reanalyses Semmelweis’s ward mortality data. Male clinicians washed their hands with chlorine from 1847, reducing mortality. This was historical observational evidence, not a modern randomised trial. Semmelweis investigated differences between the wards and changed the procedure.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "introduction of chlorine washing of the male clinicians’ hands"
+          ],
+          "historicalProvenance": {
+            "role": "original-analysis",
+            "note": "Read through the research browser; programmatic access was incomplete. original analysis; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:semmelweis-handwashing-1847:2",
+          "title": "Control of Health-Care–Associated Infections, 1961–2011",
+          "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/su6004a10.htm",
+          "publisher": "CDC MMWR",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. The CDC’s historical account describes Semmelweis presenting evidence in 1847 that unclean hands transmitted childbed fever. His findings did not immediately change hospitals generally. Clinicians’ later practices should not be collapsed into an instant universal acceptance.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "Semmelweis presented evidence that childbed fever was spread"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Read through the research browser; programmatic access was incomplete. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "Japan"
+        ],
+        "domains": [
+          "environment",
+          "health",
+          "science"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "minamata-investigation-1956",
+        "title": "Evidence of industrial harm emerges before official recognition",
+        "period": "1956–1968",
+        "startYear": 1956,
+        "endYear": 1968,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Researchers investigated illness around Minamata Bay while factory discharge continued.",
+          "anchorIds": [
+            "a2-1"
+          ]
+        },
+        "stakes": {
+          "text": "Residents’ health and continued industrial production were in conflict.",
+          "anchorIds": [
+            "a2-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "chisso",
+            "name": "Chisso",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "researchers",
+            "name": "Kumamoto University",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "government",
+            "name": "Japanese government",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a2-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "plant",
+            "name": "factory discharge system",
+            "kind": "capacity",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "findings",
+            "name": "mercury contamination findings",
+            "kind": "information",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "1956 onward",
+            "summary": "Chisso controlled the factory discharge that entered Minamata Bay.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "1956–1959",
+            "summary": "Kumamoto University researchers investigated the discharge and contaminated seafood.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "July 1959",
+            "summary": "Researchers publicly identified organic mercury as the likely cause of the disease.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b4",
+            "when": "1968",
+            "summary": "The Japanese government officially identified industrial methylmercury as the cause.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-2"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "chisso",
+            "predicate": "controls",
+            "to": "plant",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "researchers",
+            "predicate": "investigates",
+            "to": "chisso",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "researchers",
+            "predicate": "discloses",
+            "to": "findings",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r4-1",
+            "beatId": "b4",
+            "from": "government",
+            "predicate": "discloses",
+            "to": "findings",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "The Japanese government officially identified industrial methylmercury as the cause.",
+            "anchorIds": [
+              "a1-2"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:minamata-investigation-1956:1",
+            "passage": "the Research Group made their opinion public that organic mercury was likely the cause"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:minamata-investigation-1956:1",
+            "passage": "Chisso, which by 1959 had realized that the wastewater out of its factory was the cause"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:minamata-investigation-1956:2",
+            "passage": "A chemical plant on Minamata’s arcing shoreline had been dumping mercury"
+          }
+        ]
+      },
+      "id": "canon:minamata-investigation-1956",
+      "version": "episode3:6ddca4788b8daf9527cedc70",
+      "title": "Evidence of industrial harm emerges before official recognition",
+      "period": "1956–1968",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Researchers investigated illness around Minamata Bay while factory discharge continued.",
+      "sequence": [
+        {
+          "stage": "1956 onward",
+          "description": "Chisso controlled the factory discharge that entered Minamata Bay.",
+          "sourceIds": [
+            "canon:minamata-investigation-1956:2"
+          ]
+        },
+        {
+          "stage": "1956–1959",
+          "description": "Kumamoto University researchers investigated the discharge and contaminated seafood.",
+          "sourceIds": [
+            "canon:minamata-investigation-1956:1"
+          ]
+        },
+        {
+          "stage": "July 1959",
+          "description": "Researchers publicly identified organic mercury as the likely cause of the disease.",
+          "sourceIds": [
+            "canon:minamata-investigation-1956:1"
+          ]
+        },
+        {
+          "stage": "1968",
+          "description": "The Japanese government officially identified industrial methylmercury as the cause.",
+          "sourceIds": [
+            "canon:minamata-investigation-1956:1"
+          ]
+        }
+      ],
+      "outcome": "The Japanese government officially identified industrial methylmercury as the cause.",
+      "boundaries": [
+        "The chronology is specific to the documented discharge and disease investigation.",
+        "A present accusation alone is not evidence of comparable industrial contamination or concealment."
+      ],
+      "sources": [
+        {
+          "id": "canon:minamata-investigation-1956:1",
+          "title": "Determination of the cause of Minamata disease",
+          "url": "https://nimd.env.go.jp/archives/english/minamata_disease_in_depth/cause_investigation/",
+          "publisher": "National Institute for Minamata Disease",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. Japan’s National Institute for Minamata Disease documents Kumamoto University’s investigation after the 1956 outbreak. In July 1959 researchers publicly identified organic mercury as a likely cause. Chisso continued discharging wastewater despite recognising the connection by 1959. Official government recognition followed in 1968.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "the Research Group made their opinion public that organic mercury was likely the cause",
+            "Chisso, which by 1959 had realized that the wastewater out of its factory was the cause"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Read through the research browser; programmatic access was incomplete. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:minamata-investigation-1956:2",
+          "title": "Mercury has long sickened and killed",
+          "url": "https://www.unep.org/en/news-and-stories/story/mercury-has-long-sickened-and-killed-could-tide-finally-be-turning",
+          "publisher": "UNEP",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. UNEP describes the Minamata outbreak and mercury from a chemical plant entering the food chain. Japanese government recognition and later international regulation followed the original evidence. This retrospective international account partly draws on Japanese investigations.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "A chemical plant on Minamata’s arcing shoreline had been dumping mercury"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Read through the research browser; programmatic access was incomplete. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "India"
+        ],
+        "domains": [
+          "politics",
+          "world",
+          "culture"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "salt-march-1930",
+        "title": "An everyday commodity becomes the focus of civil disobedience",
+        "period": "1930",
+        "startYear": 1930,
+        "endYear": 1930,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Gandhi organised a march to challenge British control of salt through a deliberate public breach of the law.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "The protest connected colonial authority to a commodity used in daily life.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "gandhi",
+            "name": "Gandhi",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "followers",
+            "name": "followers",
+            "aliases": [],
+            "kind": "group",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "government",
+            "name": "British government",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "participation",
+            "name": "public participation in the march",
+            "kind": "access",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "March 1930: preparations",
+            "summary": "Gandhi coordinated followers for a march to Dandi.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "6 April 1930",
+            "summary": "Gandhi deliberately breached the British government’s salt law at Dandi.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "May 1930",
+            "summary": "The British government arrested Gandhi, restricting his physical participation in the campaign.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "gandhi",
+            "predicate": "coordinates",
+            "to": "followers",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "gandhi",
+            "predicate": "defies",
+            "to": "government",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "government",
+            "predicate": "restricts",
+            "to": "participation",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "The British government arrested Gandhi, restricting his physical participation in the campaign.",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:salt-march-1930:1",
+            "passage": "Gandhiji started his famous ‘Dandi March"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:salt-march-1930:2",
+            "passage": "Gandhiji on March 2,1930, addressed a historic letter to the Viceroy"
+          }
+        ]
+      },
+      "id": "canon:salt-march-1930",
+      "version": "episode3:ea407bb3034dbeb7647b24a3",
+      "title": "An everyday commodity becomes the focus of civil disobedience",
+      "period": "1930",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Gandhi organised a march to challenge British control of salt through a deliberate public breach of the law.",
+      "sequence": [
+        {
+          "stage": "March 1930: preparations",
+          "description": "Gandhi coordinated followers for a march to Dandi.",
+          "sourceIds": [
+            "canon:salt-march-1930:1"
+          ]
+        },
+        {
+          "stage": "6 April 1930",
+          "description": "Gandhi deliberately breached the British government’s salt law at Dandi.",
+          "sourceIds": [
+            "canon:salt-march-1930:2"
+          ]
+        },
+        {
+          "stage": "May 1930",
+          "description": "The British government arrested Gandhi, restricting his physical participation in the campaign.",
+          "sourceIds": [
+            "canon:salt-march-1930:1"
+          ]
+        }
+      ],
+      "outcome": "The British government arrested Gandhi, restricting his physical participation in the campaign.",
+      "boundaries": [
+        "The campaign’s goals and colonial legal setting differ from an ordinary consumer protest.",
+        "Gandhi’s later symbolic status does not establish participants’ unconscious motives."
+      ],
+      "sources": [
+        {
+          "id": "canon:salt-march-1930:1",
+          "title": "Life Events of Mahatma Gandhi",
+          "url": "https://rajghat.gov.in/chronology",
+          "publisher": "Rajghat Samadhi Committee",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. The Government of India’s Rajghat chronology dates Gandhi’s departure for Dandi to 12 March 1930 and the public breach of the salt law to April. Gandhi and followers used the march as civil disobedience against the British government, which later arrested him.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "Gandhiji started his famous ‘Dandi March"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Read through the research browser; programmatic access was incomplete. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:salt-march-1930:2",
+          "title": "Salt Satyagraha and Dandi March",
+          "url": "https://www.mkgandhi.org/articles/salt_satya.php",
+          "publisher": "M. K. Gandhi archive",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. The account describes Gandhi’s notice to the Viceroy, preparations with followers, the Dandi march and deliberate breaking of the salt law. Gandhi’s arrest interrupted his ability to participate physically, while others continued protesting the British government.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "Gandhiji on March 2,1930, addressed a historic letter to the Viceroy"
+          ],
+          "historicalProvenance": {
+            "role": "scholarly-history",
+            "note": "Read through the research browser; programmatic access was incomplete. scholarly history; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "United States",
+          "Soviet Union"
+        ],
+        "domains": [
+          "sports",
+          "politics"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "moscow-olympic-boycott-1980",
+        "title": "Government pressure reaches athletes through a formally separate committee",
+        "period": "1980",
+        "startYear": 1980,
+        "endYear": 1980,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "President Carter pressed for a boycott of the Moscow Olympics after the Soviet invasion of Afghanistan.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "Athletes’ participation depended on a committee facing strong political pressure.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "carter",
+            "name": "Carter",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "usoc",
+            "name": "USOC",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a2-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "ioc",
+            "name": "IOC",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a2-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "Early 1980",
+            "summary": "Carter requested that the USOC withhold the American team from Moscow.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "12 April 1980",
+            "summary": "The USOC voted to support the requested boycott.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "Summer 1980",
+            "summary": "The USOC withdrew American participation from the IOC’s Moscow Games.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "carter",
+            "predicate": "requests",
+            "to": "usoc",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "usoc",
+            "predicate": "supports",
+            "to": "carter",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "usoc",
+            "predicate": "withdraws",
+            "to": "ioc",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "The USOC withdrew American participation from the IOC’s Moscow Games.",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:moscow-olympic-boycott-1980:1",
+            "passage": "urged U.S. businesses not to participate in or contribute to the holding of the summer games"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:moscow-olympic-boycott-1980:2",
+            "passage": "the USOC House of Delegates met on April 12, 1980"
+          }
+        ]
+      },
+      "id": "canon:moscow-olympic-boycott-1980",
+      "version": "episode3:8a02dcd9f52f590748c67770",
+      "title": "Government pressure reaches athletes through a formally separate committee",
+      "period": "1980",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "President Carter pressed for a boycott of the Moscow Olympics after the Soviet invasion of Afghanistan.",
+      "sequence": [
+        {
+          "stage": "Early 1980",
+          "description": "Carter requested that the USOC withhold the American team from Moscow.",
+          "sourceIds": [
+            "canon:moscow-olympic-boycott-1980:1"
+          ]
+        },
+        {
+          "stage": "12 April 1980",
+          "description": "The USOC voted to support the requested boycott.",
+          "sourceIds": [
+            "canon:moscow-olympic-boycott-1980:2"
+          ]
+        },
+        {
+          "stage": "Summer 1980",
+          "description": "The USOC withdrew American participation from the IOC’s Moscow Games.",
+          "sourceIds": [
+            "canon:moscow-olympic-boycott-1980:2"
+          ]
+        }
+      ],
+      "outcome": "The USOC withdrew American participation from the IOC’s Moscow Games.",
+      "boundaries": [
+        "Athletes did not have the same decision-making power as the government or committee.",
+        "An observable boycott does not establish that it achieved its foreign-policy objective."
+      ],
+      "sources": [
+        {
+          "id": "canon:moscow-olympic-boycott-1980:1",
+          "title": "1980 Summer Olympics in Moscow White House Statement on Prohibition of U.S. Transactions With Respect to the Olympic Games.",
+          "url": "https://www.presidency.ucsb.edu/documents/1980-summer-olympics-moscow-white-house-statement-prohibition-us-transactions-with-respect",
+          "publisher": "presidency.ucsb.edu",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:13:27.304Z",
+          "summary": "Agent-authored source audit summary. Carter’s administration publicly opposed United States participation in the Moscow Olympics and prohibited certain commercial transactions connected with the Games. The policy sought political pressure after the invasion of Afghanistan; this statement is evidence of the administration’s position, not its effectiveness.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "urged U.S. businesses not to participate in or contribute to the holding of the summer games"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Source text was programmatically retrieved and its excerpts checked. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:moscow-olympic-boycott-1980:2",
+          "title": "Moscow 1980 U.S. Olympic Team",
+          "url": "https://www.usopc.org/archives/moscow-1980-u-s-olympic-team",
+          "publisher": "USOPC",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. The United States Olympic Committee’s account records its April 12 vote supporting Carter’s requested boycott. The USOC, rather than the IOC, decided whether the American team would attend. The record describes the cost to athletes; it does not prove that the boycott changed Soviet policy.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "the USOC House of Delegates met on April 12, 1980"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Read through the research browser; programmatic access was incomplete. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "Italy",
+          "Australia"
+        ],
+        "domains": [
+          "sports"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "prost-ferrari-1991",
+        "title": "A public dispute ends with a driver losing the seat",
+        "period": "1991",
+        "startYear": 1991,
+        "endYear": 1991,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Prost’s public criticism accompanied a dispute with Ferrari before the team ended his contract.",
+          "anchorIds": [
+            "a2-1"
+          ]
+        },
+        "stakes": {
+          "text": "A driver’s public voice and the team’s control of its race seat came into conflict.",
+          "anchorIds": [
+            "a2-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "prost",
+            "name": "Alain Prost",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "ferrari",
+            "name": "Ferrari",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "morbidelli",
+            "name": "Gianni Morbidelli",
+            "aliases": [],
+            "kind": "person",
+            "anchorIds": [
+              "a2-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "seat",
+            "name": "Ferrari race seat",
+            "kind": "work",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "October 1991",
+            "summary": "Alain Prost publicly criticised Ferrari during a difficult season.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "29 October 1991",
+            "summary": "Ferrari removed Prost from its race seat and ended their cooperation.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "1991 Australian Grand Prix",
+            "summary": "Ferrari substituted Gianni Morbidelli for the final race.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "prost",
+            "predicate": "challenges",
+            "to": "ferrari",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "ferrari",
+            "predicate": "removes",
+            "to": "seat",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "ferrari",
+            "predicate": "substitutes",
+            "to": "morbidelli",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "Ferrari substituted Gianni Morbidelli for the final race.",
+            "anchorIds": [
+              "a2-1"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:prost-ferrari-1991:1",
+            "passage": "Ferrari fired three-time world champion Alain Prost"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:prost-ferrari-1991:2",
+            "passage": "his place taken by Minardi’s Gianni Morbidelli in Australia"
+          },
+          {
+            "id": "a2-2",
+            "sourceId": "canon:prost-ferrari-1991:2",
+            "passage": "The team refused Prost’s request"
+          }
+        ]
+      },
+      "id": "canon:prost-ferrari-1991",
+      "version": "episode3:97ee172ddcd179187fba9c67",
+      "title": "A public dispute ends with a driver losing the seat",
+      "period": "1991",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Prost’s public criticism accompanied a dispute with Ferrari before the team ended his contract.",
+      "sequence": [
+        {
+          "stage": "October 1991",
+          "description": "Alain Prost publicly criticised Ferrari during a difficult season.",
+          "sourceIds": [
+            "canon:prost-ferrari-1991:2"
+          ]
+        },
+        {
+          "stage": "29 October 1991",
+          "description": "Ferrari removed Prost from its race seat and ended their cooperation.",
+          "sourceIds": [
+            "canon:prost-ferrari-1991:1"
+          ]
+        },
+        {
+          "stage": "1991 Australian Grand Prix",
+          "description": "Ferrari substituted Gianni Morbidelli for the final race.",
+          "sourceIds": [
+            "canon:prost-ferrari-1991:2"
+          ]
+        }
+      ],
+      "outcome": "Ferrari substituted Gianni Morbidelli for the final race.",
+      "boundaries": [
+        "Public criticism and private team discussions are different forms of disagreement.",
+        "The facts of any present-day allegation must be established separately."
+      ],
+      "sources": [
+        {
+          "id": "canon:prost-ferrari-1991:1",
+          "title": "AUTO RACING",
+          "url": "https://www.washingtonpost.com/archive/sports/1991/10/30/auto-racing/ab3de6ae-250d-42b5-81d6-eecb68e45d01/",
+          "publisher": "washingtonpost.com",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T04:16:20.532Z",
+          "summary": "Agent-authored source audit summary. Contemporaneous reporting says Ferrari dismissed Alain Prost after disputes, announcing that cooperation would end immediately.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "Ferrari fired three-time world champion Alain Prost"
+          ],
+          "historicalProvenance": {
+            "role": "original-reporting",
+            "note": "Source text was programmatically retrieved and its excerpts checked. original reporting; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:prost-ferrari-1991:2",
+          "title": "Ferrari’s dismissal of Prost in 1991",
+          "url": "https://www.formula1.com/en/latest/article/top-10-ferrari-bombshells-in-f1.2lEYoNLqh22UwCygWqeMc6",
+          "publisher": "Formula 1",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. Formula 1’s retrospective describes Alain Prost’s criticism of Ferrari’s car, the dismissal before the final 1991 race and Gianni Morbidelli’s replacement appearance in Australia. This retrospective is supporting context, not separate contemporary reporting. The team had refused Prost’s preferred tyre choice in Spain before his later public criticism of the car.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "his place taken by Minardi’s Gianni Morbidelli in Australia",
+            "The team refused Prost’s request"
+          ],
+          "historicalProvenance": {
+            "role": "secondary",
+            "note": "Read through the research browser; programmatic access was incomplete. secondary; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  },
+  {
+    "historicalCase": {
+      "curation": {
+        "edition": "source-canon-2026-11-04-1",
+        "regions": [
+          "United States"
+        ],
+        "domains": [
+          "technology",
+          "politics"
+        ],
+        "process": "agent-source-audit",
+        "independenceNote": "Different source origins are documented; shared upstream accounts may remain. No independent historian review or cultural-independence claim is made."
+      },
+      "episode": {
+        "version": 1,
+        "encoding": "typed-relations-2",
+        "id": "reno-aclu-1997",
+        "title": "A child-protection law meets a constitutional speech challenge",
+        "period": "1996–1997",
+        "startYear": 1996,
+        "endYear": 1997,
+        "startDate": null,
+        "endDate": null,
+        "temporalStatus": "retrospective",
+        "basis": "actions",
+        "conflict": {
+          "text": "Congress enacted internet indecency restrictions, and civil-liberties groups challenged their breadth.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "stakes": {
+          "text": "Protecting minors and preserving lawful adult speech required different legal tests.",
+          "anchorIds": [
+            "a1-1"
+          ]
+        },
+        "actors": [
+          {
+            "id": "congress",
+            "name": "Congress",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "government",
+            "name": "government",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "aclu",
+            "name": "ACLU",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "district",
+            "name": "District Court",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          },
+          {
+            "id": "supreme",
+            "name": "Supreme Court",
+            "aliases": [],
+            "kind": "institution",
+            "anchorIds": [
+              "a1-1"
+            ],
+            "claimedRole": null
+          }
+        ],
+        "resources": [
+          {
+            "id": "law",
+            "name": "internet indecency restrictions",
+            "kind": "authority",
+            "anchorIds": [
+              "a1-1"
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "id": "b1",
+            "when": "February 1996",
+            "summary": "Congress adopted internet indecency restrictions intended to protect minors.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "b2",
+            "when": "1996: challenge",
+            "summary": "The ACLU challenged the government’s ability to enforce the restrictions.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b3",
+            "when": "1996: hearing",
+            "summary": "The District Court examined the government’s defence of the restrictions.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "b4",
+            "when": "1996: injunction",
+            "summary": "The District Court restricted government enforcement pending appellate review.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "b5",
+            "when": "June 1997",
+            "summary": "The Supreme Court affirmed the judgment against the challenged restrictions.",
+            "basis": "reported-action",
+            "anchorIds": [
+              "a1-2"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1-1",
+            "beatId": "b1",
+            "from": "congress",
+            "predicate": "adopts",
+            "to": "law",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-1"
+            ]
+          },
+          {
+            "id": "r2-1",
+            "beatId": "b2",
+            "from": "aclu",
+            "predicate": "challenges",
+            "to": "government",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r3-1",
+            "beatId": "b3",
+            "from": "district",
+            "predicate": "investigates",
+            "to": "government",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a2-1"
+            ]
+          },
+          {
+            "id": "r4-1",
+            "beatId": "b4",
+            "from": "district",
+            "predicate": "restricts",
+            "to": "government",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          },
+          {
+            "id": "r5-1",
+            "beatId": "b5",
+            "from": "supreme",
+            "predicate": "overrides",
+            "to": "government",
+            "layer": "actions",
+            "allegedConduct": null,
+            "anchorIds": [
+              "a1-2"
+            ]
+          }
+        ],
+        "position": {
+          "stage": "aftermath",
+          "observation": {
+            "text": "The Supreme Court affirmed the judgment against the challenged restrictions.",
+            "anchorIds": [
+              "a1-2"
+            ]
+          }
+        },
+        "anchors": [
+          {
+            "id": "a1-1",
+            "sourceId": "canon:reno-aclu-1997:1",
+            "passage": "Two provisions of the Communications Decency Act of 1996"
+          },
+          {
+            "id": "a1-2",
+            "sourceId": "canon:reno-aclu-1997:1",
+            "passage": "The judgment of the District Court is affirmed"
+          },
+          {
+            "id": "a2-1",
+            "sourceId": "canon:reno-aclu-1997:2",
+            "passage": "The ACLU files its legal challenge in federal district court"
+          }
+        ]
+      },
+      "id": "canon:reno-aclu-1997",
+      "version": "episode3:4491b93247f2b469bb7fec61",
+      "title": "A child-protection law meets a constitutional speech challenge",
+      "period": "1996–1997",
+      "family": "unknown",
+      "signals": [],
+      "initialState": "Congress enacted internet indecency restrictions, and civil-liberties groups challenged their breadth.",
+      "sequence": [
+        {
+          "stage": "February 1996",
+          "description": "Congress adopted internet indecency restrictions intended to protect minors.",
+          "sourceIds": [
+            "canon:reno-aclu-1997:1"
+          ]
+        },
+        {
+          "stage": "1996: challenge",
+          "description": "The ACLU challenged the government’s ability to enforce the restrictions.",
+          "sourceIds": [
+            "canon:reno-aclu-1997:2"
+          ]
+        },
+        {
+          "stage": "1996: hearing",
+          "description": "The District Court examined the government’s defence of the restrictions.",
+          "sourceIds": [
+            "canon:reno-aclu-1997:2"
+          ]
+        },
+        {
+          "stage": "1996: injunction",
+          "description": "The District Court restricted government enforcement pending appellate review.",
+          "sourceIds": [
+            "canon:reno-aclu-1997:1"
+          ]
+        },
+        {
+          "stage": "June 1997",
+          "description": "The Supreme Court affirmed the judgment against the challenged restrictions.",
+          "sourceIds": [
+            "canon:reno-aclu-1997:1"
+          ]
+        }
+      ],
+      "outcome": "The Supreme Court affirmed the judgment against the challenged restrictions.",
+      "boundaries": [
+        "The United States First Amendment is not interchangeable with another country’s constitutional protections.",
+        "The particular restrictions, evidence and procedural stage matter more than a shared reference to children."
+      ],
+      "sources": [
+        {
+          "id": "canon:reno-aclu-1997:1",
+          "title": "Reno v. ACLU, 521 U.S. 844 (1997)",
+          "url": "https://supreme.justia.com/cases/federal/us/521/844/",
+          "publisher": "U.S. Supreme Court judgment via Justia",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. The Supreme Court judgment records Congress’s 1996 Communications Decency Act, the ACLU’s challenge and a District Court injunction against government enforcement. The Supreme Court affirmed the judgment in 1997, holding the challenged provisions inconsistent with First Amendment protections. The judgment did not invalidate every rule protecting children online.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "Two provisions of the Communications Decency Act of 1996",
+            "The judgment of the District Court is affirmed"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Read through the research browser; programmatic access was incomplete. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        },
+        {
+          "id": "canon:reno-aclu-1997:2",
+          "title": "Chronology of Reno v. ACLU",
+          "url": "https://www.aclu.org/press-releases/chronology-reno-v-aclu-i",
+          "publisher": "ACLU",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-04T14:29:29.041Z",
+          "summary": "Agent-authored source audit summary. The ACLU’s contemporaneous chronology records its challenge to the law and the government’s appeal after a federal panel ruled against the restrictions. This is a litigant’s record and advocacy perspective, not a neutral statement about every internet regulation.",
+          "kind": "historical-reference",
+          "exactPassages": [
+            "The ACLU files its legal challenge in federal district court"
+          ],
+          "historicalProvenance": {
+            "role": "primary-record",
+            "note": "Read through the research browser; programmatic access was incomplete. primary record; this is agent curation, not independent historian review.",
+            "basisPassage": null,
+            "checkedBy": "agent-source-audit"
+          },
+          "retrieval": "source-summary"
+        }
+      ],
+      "review": "web-researched",
+      "reviewNote": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+      "narrative": null
+    },
+    "reviewer": "Tether agent source audit",
+    "reviewedAt": "2026-11-04T14:29:29.041Z",
+    "notes": "Agent-curated from identified original or scholarly sources. Exact excerpts and episode references checked in code; no independent historian or separate-model semantic review is claimed.",
+    "support": []
+  }
+]

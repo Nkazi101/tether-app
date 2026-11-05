@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  ReactNode,
+} from "react";
 
 interface ToastContextType {
   showToast: (message: string) => void;
@@ -7,7 +13,9 @@ interface ToastContextType {
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
 export function ToastProvider({ children }: { children: ReactNode }) {
-  const [toast, setToast] = useState<{ message: string; id: number } | null>(null);
+  const [toast, setToast] = useState<{ message: string; id: number } | null>(
+    null,
+  );
 
   const showToast = useCallback((message: string) => {
     const id = Date.now();
@@ -21,10 +29,12 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     <ToastContext.Provider value={{ showToast }}>
       {children}
       {toast && (
-        <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[100] animate-in fade-in slide-in-from-bottom-4">
-          <div className="bg-inverse-surface text-inverse-on-surface px-6 py-3 rounded-full shadow-lg font-label text-xs uppercase tracking-widest font-bold">
-            {toast.message}
-          </div>
+        <div
+          className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[100] animate-in fade-in slide-in-from-bottom-4"
+          role="status"
+          aria-live="polite"
+        >
+          <div className="toast-message">{toast.message}</div>
         </div>
       )}
     </ToastContext.Provider>
@@ -34,7 +44,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
 export function useToast() {
   const context = useContext(ToastContext);
   if (!context) {
-    throw new Error('useToast must be used within a ToastProvider');
+    throw new Error("useToast must be used within a ToastProvider");
   }
   return context;
 }

@@ -6,3 +6,7 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Local browser captures and generated audit artifacts.
+/.playwright-mcp/
+/audit/

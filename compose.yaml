@@ -1,0 +1,27 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL}
+        VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY}
+    env_file: .env
+    environment:
+      NODE_ENV: production
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
+  worker:
+    build: .
+    env_file: .env
+    command: ['node', 'build/server/worker.js']
+    healthcheck:
+      disable: true
+    restart: unless-stopped
+  scheduler:
+    build: .
+    env_file: .env
+    command: ['node', 'build/server/scheduler.js']
+    healthcheck:
+      disable: true
+    restart: unless-stopped

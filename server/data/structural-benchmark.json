@@ -1,0 +1,587 @@
+{
+  "version": 1,
+  "edition": "source-canon-2026-11-04-1",
+  "corpusHash": "b7c22e901c466fabc1b918746c07ded4d5f287ba1dadc876a912846a43958636",
+  "generatedAt": "2026-11-04T15:47:31.221Z",
+  "classification": "synthetic-structural-regression",
+  "independentHistoricalAccuracy": null,
+  "extractionAccuracy": null,
+  "worldwideRecall": null,
+  "cases": 14,
+  "checks": 70,
+  "passed": 70,
+  "failed": [],
+  "selfRetrieval": {
+    "retrieved": 14,
+    "total": 14
+  },
+  "limitations": [
+    "Probes are derived from this corpus, not a held-out independent set.",
+    "No human or model rating is counted as independent factual validation.",
+    "Self-retrieval and corruption rejection do not measure insight or real-world accuracy."
+  ],
+  "results": [
+    {
+      "id": "canon:magna-carta-1215",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:magna-carta-1215",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:magna-carta-1215",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:magna-carta-1215",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:magna-carta-1215",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:oil-embargo-1973",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:oil-embargo-1973",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:oil-embargo-1973",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:oil-embargo-1973",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:oil-embargo-1973",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:bank-holiday-1933",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:bank-holiday-1933",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:bank-holiday-1933",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:bank-holiday-1933",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:bank-holiday-1933",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:montgomery-boycott-1955",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:montgomery-boycott-1955",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:montgomery-boycott-1955",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:montgomery-boycott-1955",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:montgomery-boycott-1955",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:gdansk-solidarity-1980",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:gdansk-solidarity-1980",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:gdansk-solidarity-1980",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:gdansk-solidarity-1980",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:gdansk-solidarity-1980",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:pjs-privacy-2016",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:pjs-privacy-2016",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:pjs-privacy-2016",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:pjs-privacy-2016",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:pjs-privacy-2016",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:best-buy-reorganisation-2013",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:best-buy-reorganisation-2013",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:best-buy-reorganisation-2013",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:best-buy-reorganisation-2013",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:best-buy-reorganisation-2013",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:athens-sicily-415",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:athens-sicily-415",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:athens-sicily-415",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:athens-sicily-415",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:athens-sicily-415",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:semmelweis-handwashing-1847",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:semmelweis-handwashing-1847",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:semmelweis-handwashing-1847",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:semmelweis-handwashing-1847",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:semmelweis-handwashing-1847",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:minamata-investigation-1956",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:minamata-investigation-1956",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:minamata-investigation-1956",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:minamata-investigation-1956",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:minamata-investigation-1956",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:salt-march-1930",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:salt-march-1930",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:salt-march-1930",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:salt-march-1930",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:salt-march-1930",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:moscow-olympic-boycott-1980",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:moscow-olympic-boycott-1980",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:moscow-olympic-boycott-1980",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:moscow-olympic-boycott-1980",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:moscow-olympic-boycott-1980",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:prost-ferrari-1991",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:prost-ferrari-1991",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:prost-ferrari-1991",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:prost-ferrari-1991",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:prost-ferrari-1991",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:reno-aclu-1997",
+      "kind": "same-structure",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:reno-aclu-1997",
+      "kind": "vocabulary-invariance",
+      "expected": true,
+      "matched": true,
+      "pass": true
+    },
+    {
+      "id": "canon:reno-aclu-1997",
+      "kind": "future-case-rejection",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:reno-aclu-1997",
+      "kind": "one-generic-action",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    },
+    {
+      "id": "canon:reno-aclu-1997",
+      "kind": "announced-is-not-implemented",
+      "expected": false,
+      "matched": false,
+      "pass": true
+    }
+  ],
+  "ranking": [
+    {
+      "id": "canon:magna-carta-1215",
+      "retrieved": true,
+      "first": "magna-carta-1215"
+    },
+    {
+      "id": "canon:oil-embargo-1973",
+      "retrieved": true,
+      "first": "oil-embargo-1973"
+    },
+    {
+      "id": "canon:bank-holiday-1933",
+      "retrieved": true,
+      "first": "bank-holiday-1933"
+    },
+    {
+      "id": "canon:montgomery-boycott-1955",
+      "retrieved": true,
+      "first": "montgomery-boycott-1955"
+    },
+    {
+      "id": "canon:gdansk-solidarity-1980",
+      "retrieved": true,
+      "first": "gdansk-solidarity-1980"
+    },
+    {
+      "id": "canon:pjs-privacy-2016",
+      "retrieved": true,
+      "first": "pjs-privacy-2016"
+    },
+    {
+      "id": "canon:best-buy-reorganisation-2013",
+      "retrieved": true,
+      "first": "best-buy-reorganisation-2013"
+    },
+    {
+      "id": "canon:athens-sicily-415",
+      "retrieved": true,
+      "first": "athens-sicily-415"
+    },
+    {
+      "id": "canon:semmelweis-handwashing-1847",
+      "retrieved": true,
+      "first": "semmelweis-handwashing-1847"
+    },
+    {
+      "id": "canon:minamata-investigation-1956",
+      "retrieved": true,
+      "first": "minamata-investigation-1956"
+    },
+    {
+      "id": "canon:salt-march-1930",
+      "retrieved": true,
+      "first": "salt-march-1930"
+    },
+    {
+      "id": "canon:moscow-olympic-boycott-1980",
+      "retrieved": true,
+      "first": "moscow-olympic-boycott-1980"
+    },
+    {
+      "id": "canon:prost-ferrari-1991",
+      "retrieved": true,
+      "first": "prost-ferrari-1991"
+    },
+    {
+      "id": "canon:reno-aclu-1997",
+      "retrieved": true,
+      "first": "reno-aclu-1997"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+-- Tether local seed placeholder.
+-- Keep this file so `supabase db reset` has a stable seed target even before
+-- we move the Golden Set and larger ingestion jobs into Supabase.

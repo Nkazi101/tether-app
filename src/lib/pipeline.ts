@@ -1,164 +1,226 @@
-import { GoogleGenAI, Type } from "@google/genai";
-import { db } from "./firebase";
-import { collection, doc, setDoc, serverTimestamp } from "firebase/firestore";
-import { fetchTopNews } from "./news";
+import { getAuthHeaders } from "./auth-client";
+import type { DomainSlug } from "./archetypes";
 
-function getAI() {
-  return new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+export interface HistoricalArchiveScope {
+  retrievalMode: "corpus-wide-federated-scan";
+  casesConsidered: number;
+  structuredCases: number;
+  casesWithOutcomes: number;
+  casesWithArchetypes: number;
+  domainsCovered: number;
+  eventTypesCovered: number;
+  mechanismsCovered: number;
+  archetypesCovered: number;
+  matchingDomains: number;
+  matchingEventTypes: number;
+  matchingMechanisms: number;
+  matchingArchetypes: number;
+  evidenceDepth: "thin" | "developing" | "broad";
+}
+
+export interface HistoricalEpisodeRecord {
+  id: string;
+  dataset: string;
+  episode_key: string;
+  title: string;
+  summary: string;
+  structural_pattern: string;
+  archetype_slug: string | null;
+  event_root_code: string | null;
+  actor1_code: string | null;
+  actor2_code: string | null;
+  action_geo_country_code: string | null;
+  start_date: string;
+  end_date: string;
+  member_count: number;
+  total_events: number;
+  total_articles: number;
+  peak_articles: number;
+  average_goldstein: number | null;
+  evidence_score: number;
+  source_completeness: "sampled" | "complete" | "unknown";
+  status: "candidate" | "enriched" | "promoted" | "rejected";
+  narrative_summary: string | null;
+  outcome_summary: string | null;
+  source_count: number;
+  enrichment_score: number | null;
+  promotion_eligible: boolean;
+  sources?: HistoricalEpisodeSourceRecord[];
+  rank: number;
+}
+
+export interface HistoricalEpisodeSourceRecord {
+  id: string;
+  episode_id: string;
+  source_type: "wikipedia" | "wikidata" | "manual" | "other";
+  source_title: string;
+  source_url: string;
+  source_excerpt: string | null;
+  source_rank: number;
+  retrieved_at: string;
+}
+
+export interface HistoricalEpisodeResponse {
+  dataset: string;
+  retrievalMode: "deterministic-episode-cluster";
+  sourceCompleteness: "sampled" | "complete" | "unknown";
+  caveat: string;
+  query: string | null;
+  episodeCount: number;
+  episodes: HistoricalEpisodeRecord[];
+}
+
+export interface HistoricalArchiveLens {
+  kind: "best-fit" | "same-domain" | "mechanism" | "archetype" | "cross-domain" | "counterexample";
+  title: string;
+  reason: string;
+  candidateId: string;
+  domainSlug: string | null;
+  eventTypeSlug: string | null;
+  structuralFitScore: number;
+  confidenceScore: number;
+}
+
+export interface FeedRecord {
+  id: string | number;
+  modernTitle: string;
+  historicalTitle: string;
+  modernEvent: string;
+  historicalEvent: string;
+  description: string;
+  structuralSkeleton?: string;
+  imageUrl: string;
+  imageAlt: string;
+  highlight: string;
+  layout: string;
+  categorySlug?: DomainSlug | null;
+  parallelState?: "verified" | "emerging" | "archive-gap" | "current-event";
+  link?: string;
+  sourceName?: string | null;
+  publishedAt?: string | null;
+  sourceCount?: number;
+  providerCount?: number;
+  providerNames?: string[];
+  sourceLabels?: string[];
+  dataOrigin?: "live" | "fallback";
+  lastSeenAt?: string | null;
+  corroborationSummary?: string;
+  significanceScore?: number;
+  coverageScore?: number;
+  archiveScope?: HistoricalArchiveScope;
+  confidenceScore?: number;
+  archiveGap?: boolean;
+  rationale?: string;
+  disanalogyNote?: string | null;
+  peopleSummary?: string | null;
+  deepDiveReady?: boolean;
+}
+
+export interface SyncStatus {
+  enabled: boolean;
+  running: boolean;
+  schedule: string | null;
+  timezone: string | null;
+  nextScheduledAt: string | null;
+  lastStartedAt: string | null;
+  lastCompletedAt: string | null;
+  lastSucceededAt: string | null;
+  lastFailedAt: string | null;
+  lastError: string | null;
+  lastTrigger: "manual" | "scheduled" | null;
+  lastDurationMs: number | null;
+}
+
+export interface FeedResponse {
+  feed: FeedRecord[];
+  verified?: FeedRecord[];
+  stream?: FeedRecord[];
+  categories?: DomainSlug[];
+  status?: "live" | "stale" | "empty";
+  dataAsOf?: string | null;
+  syncStatus?: SyncStatus;
+}
+
+export interface DailyEchoRecord {
+  id?: string | number;
+  modern_title: string;
+  modern_description?: string;
+  structural_skeleton?: string;
+  archetype?: string;
+  actors?: string[];
+  historical_parallel: string;
+  historical_description?: string;
+  shadow_motive?: string;
+}
+
+export async function fetchLatestDailyEchoes() {
+  const response = await fetch("/api/daily-echoes/latest");
+
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({ error: "Unknown error" }));
+    throw new Error(error.error || "Failed to load the latest daily echoes");
+  }
+
+  const data = await response.json();
+  return (data.echoes || []) as DailyEchoRecord[];
+}
+
+export async function fetchFeedRecords() {
+  const response = await fetch("/api/feed");
+
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({ error: "Unknown error" }));
+    throw new Error(error.error || "Failed to load the feed");
+  }
+
+  const contentType = response.headers.get("content-type") || "";
+  if (!contentType.includes("application/json")) {
+    throw new Error("Feed endpoint returned a non-JSON response");
+  }
+
+  const data = (await response.json()) as FeedResponse;
+  return {
+    feed: data.feed || data.verified || [],
+    verified: data.verified || data.feed || [],
+    stream: data.stream || [],
+    categories: data.categories || [],
+    status:
+      data.status ||
+      ((data.verified || data.feed || []).length > 0 || (data.stream || []).length > 0
+        ? "live"
+        : "empty"),
+    dataAsOf: data.dataAsOf || null,
+    syncStatus: data.syncStatus,
+  } satisfies FeedResponse;
+}
+
+export async function fetchHistoricalEpisodes(query = "", limit = 8) {
+  const params = new URLSearchParams({ limit: String(limit) });
+  if (query.trim()) params.set("q", query.trim());
+
+  const response = await fetch(`/api/historical-episodes?${params.toString()}`);
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({ error: "Unknown error" }));
+    throw new Error(error.error || "Failed to load historical episode clusters");
+  }
+
+  return (await response.json()) as HistoricalEpisodeResponse;
 }
 
 export async function processNewsPipeline() {
-  console.log("Starting Frontend Newsroom Pipeline...");
-  const ai = getAI();
-  
-  try {
-    const news = await fetchTopNews();
-    const echoesList = [];
-    
-    // If no news fetched, use fallback
-    const articlesToProcess = news.length > 0 ? news : [
-      {
-        title: "Tech Giant Faces Antitrust Lawsuit Over App Store Monopoly",
-        description: "Regulators are cracking down on the company's 30% fee and restrictive policies for third-party developers.",
-        link: "https://example.com/news/1"
-      },
-      {
-        title: "Global Supply Chain Crisis Worsens as Key Strait Blocked",
-        description: "Shipping routes are completely halted after a major geopolitical incident in the vital trade corridor.",
-        link: "https://example.com/news/2"
-      }
-    ];
+  const authHeaders = await getAuthHeaders();
+  const response = await fetch("/api/pipeline/run", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...authHeaders,
+    },
+  });
 
-    for (const article of articlesToProcess) {
-      // 1. Abstract: Get Structural Skeleton (Remove Proper Nouns)
-      const abstractionResponse = await ai.models.generateContent({
-        model: "gemini-3.1-pro-preview",
-        contents: `Analyze this news event and extract its structural skeleton. 
-        Remove ALL proper nouns (names, countries, companies). 
-        Use generic archetypal roles (e.g., [Hegemon], [Challenger], [Resource]).
-        
-        News: ${article.title} - ${article.description}`,
-        config: {
-          responseMimeType: "application/json",
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: {
-              structural_skeleton: { type: Type.STRING, description: "The abstracted narrative skeleton." },
-              archetype: { type: Type.STRING, description: "The core archetype (e.g., 'The Monopoly Squeeze', 'The Chokepoint Crisis')" },
-              actors: { 
-                type: Type.ARRAY, 
-                items: { type: Type.STRING },
-                description: "List of generic roles involved."
-              }
-            },
-            required: ["structural_skeleton", "archetype", "actors"]
-          }
-        }
-      });
-
-      const abstraction = JSON.parse(abstractionResponse.text || "{}");
-      
-      // 2. Embed: Vectorize the Structural Skeleton
-      const embeddingResponse = await ai.models.embedContent({
-        model: "gemini-embedding-2-preview",
-        contents: abstraction.structural_skeleton
-      });
-      
-      const vector = embeddingResponse.embeddings?.[0]?.values;
-
-      // 3 & 4. Search and Synthesize: Call our RAG backend endpoint
-      let synthesis = {
-        historical_parallel: "Awaiting database population",
-        historical_description: "The vector database is currently empty. Please run the seeding script.",
-        shadow_motive: "N/A"
-      };
-
-      try {
-        const ragResponse = await fetch("/api/rag-search", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            modern_title: article.title,
-            structural_skeleton: abstraction.structural_skeleton,
-            embedding: vector
-          })
-        });
-
-        if (ragResponse.ok) {
-          synthesis = await ragResponse.json();
-        } else {
-          const errorData = await ragResponse.json();
-          console.warn("RAG Search returned an error:", errorData.error);
-          
-          // Fallback if DB is empty or error occurs
-          if (ragResponse.status === 404) {
-             console.log("Vector DB is empty. Falling back to Gemini's internal knowledge.");
-             const fallbackResponse = await ai.models.generateContent({
-              model: "gemini-3.1-pro-preview",
-              contents: `Based on this modern event and its structural skeleton, identify the 'Shadow Motive' (the hidden driver or actual outcome based on historical precedent).
-              
-              Modern Event: ${article.title}
-              Skeleton: ${abstraction.structural_skeleton}
-              
-              Provide a historical parallel and the shadow motive.`,
-              config: {
-                responseMimeType: "application/json",
-                responseSchema: {
-                  type: Type.OBJECT,
-                  properties: {
-                    historical_parallel: { type: Type.STRING },
-                    historical_description: { type: Type.STRING },
-                    shadow_motive: { type: Type.STRING }
-                  },
-                  required: ["historical_parallel", "historical_description", "shadow_motive"]
-                }
-              }
-            });
-            synthesis = JSON.parse(fallbackResponse.text || "{}");
-          }
-        }
-      } catch (err) {
-         console.error("Failed to call RAG endpoint:", err);
-      }
-
-      // 5. Prepare Echo
-      const echoDoc = {
-        modern_title: article.title,
-        modern_description: article.description,
-        structural_skeleton: abstraction.structural_skeleton,
-        archetype: abstraction.archetype,
-        actors: abstraction.actors,
-        historical_parallel: synthesis.historical_parallel,
-        historical_description: synthesis.historical_description,
-        shadow_motive: synthesis.shadow_motive,
-        embedding: vector || []
-      };
-      
-      echoesList.push(echoDoc);
-    }
-    
-    // 6. Store: Save to Firestore as a daily echo document
-    const today = new Date().toISOString().split('T')[0];
-    try {
-      if (db) {
-        await setDoc(doc(db, "daily_echoes", today), {
-          date: today,
-          echoes: echoesList,
-          createdAt: serverTimestamp()
-        });
-        console.log(`Processed and stored daily echoes for ${today}`);
-      }
-    } catch (dbError) {
-      console.warn(`Could not store in DB: ${dbError}`);
-      throw dbError;
-    }
-    
-    console.log("Pipeline complete.");
-    return echoesList;
-  } catch (error) {
-    console.error("Pipeline error:", error);
-    throw error;
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({ error: "Unknown error" }));
+    throw new Error(error.error || "Failed to run the news pipeline");
   }
+
+  return response.json();
 }
