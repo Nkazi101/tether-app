@@ -50,6 +50,33 @@ A multi-stage Node 24 `Dockerfile` and `compose.yaml` are supplied. Public brows
 
 Database readiness alone does not mean a worker is processing jobs. Monitor all relevant checks. The administrator section of Profile displays durable jobs, explicit retry controls, resource reservations, and runtime heartbeats.
 
+## Vercel
+
+The repository includes a Vite frontend and a Vercel function for `/api/*`.
+`vercel.json` sends API requests to the Express application and page routes to
+the built frontend. Import the repository with the Vite framework preset and
+the default `npm run build` command and `dist` output directory.
+
+Connect the intended Supabase project to the Vercel **Production** environment.
+The build accepts the integration's `SUPABASE_URL` and
+`SUPABASE_PUBLISHABLE_KEY` (or `SUPABASE_ANON_KEY`) as browser settings;
+`NEXT_PUBLIC_SUPABASE_*` aliases also work. Explicit `VITE_SUPABASE_URL` and
+`VITE_SUPABASE_ANON_KEY` values take priority. Only the public URL and browser
+key are embedded in the frontend. The API needs `SUPABASE_URL` and
+`SUPABASE_SERVICE_ROLE_KEY` at runtime. Environment changes require a new
+deployment. Use the same Supabase project for both sides.
+
+After deployment, `/api/health/live` should return `alive` and
+`/api/health/ready` should return `ready`. A readiness failure means the server
+credentials or required database schema need attention. In Supabase Auth,
+configure the production site URL and the callback URLs used by the app.
+
+The durable worker and scheduler still need a persistent Node host with the
+same server environment. Vercel serves existing readings and queues new work;
+it does not run `npm run worker` or `npm run scheduler` in the background.
+Use the Docker/Compose process model above for those services and check
+`/api/health/worker` before relying on new comparisons or feed refreshes.
+
 ## Reader workflow
 
 1. Browse current reporting, choose a category, or bring an event description/public article URL. Extraction rejects private network destinations, bounds redirects and page size, and asks for text when the publisher blocks access. Live blogs require a specific update.

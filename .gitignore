@@ -10,3 +10,4 @@ coverage/
 # Local browser captures and generated audit artifacts.
 /.playwright-mcp/
 /audit/
+/.vercel/

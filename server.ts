@@ -1,47 +1,13 @@
 import dotenv from "dotenv";
-import express, { type ErrorRequestHandler } from "express";
+import express from "express";
 import path from "node:path";
 import {createServer as createHttpServer} from "node:http";
-import { z } from "zod";
-import { getSupabaseServerClient } from "./src/lib/supabase/server";
-import { createLivingApi } from "./server/api";
-import { createAccountApi } from "./server/account-api";
-import { InputError } from "./server/services/article";
+import { createApp } from "./server/app";
+
+export { createApp } from "./server/app";
 
 dotenv.config({ path: ".env.local", override: true, quiet: true });
 dotenv.config({ quiet: true });
-export function createApp() {
-  const app = express();
-  app.disable("x-powered-by");
-  app.set("query parser", "simple");
-  const proxyHops = Number(process.env.TRUST_PROXY_HOPS || 0);
-  if (Number.isInteger(proxyHops) && proxyHops > 0 && proxyHops <= 3)
-    app.set("trust proxy", proxyHops);
-  app.use(express.json({ limit: "32kb", strict: true, inflate: false }));
-  app.use((_req, res, next) => {
-    res.setHeader("X-Content-Type-Options", "nosniff");
-    res.setHeader("X-Frame-Options", "DENY");
-    res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
-    res.setHeader(
-      "Permissions-Policy",
-      "camera=(), microphone=(), geolocation=()",
-    );
-    next();
-  });
-  const db =
-    process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY
-      ? getSupabaseServerClient()
-      : null;
-  app.use("/api", createLivingApi(db));
-  app.use("/api", createAccountApi(db));
-  app.use("/api", (_req, res) =>
-    res.status(404).json({
-      error:
-        "This endpoint is unavailable. Open Explore for historical comparisons.",
-    }),
-  );
-  return app;
-}
 export async function startServer() {
   const app = createApp();
   const httpServer = createHttpServer(app);
@@ -65,40 +31,6 @@ export async function startServer() {
     developmentServer = vite;
     app.use(vite.middlewares);
   }
-  const errors: ErrorRequestHandler = (error, _req, res, _next) => {
-    res.setHeader("Cache-Control", "no-store");
-    if (error instanceof z.ZodError) {
-      res.status(400).json({
-        error: error.issues[0]?.message || "Check the request fields.",
-      });
-      return;
-    }
-    if (error instanceof InputError) {
-      res.status(error.status).json({ error: error.message });
-      return;
-    }
-    if (error?.type === "entity.too.large") {
-      res.status(413).json({ error: "This request is too large." });
-      return;
-    }
-    if (
-      error instanceof SyntaxError ||
-      error?.type === "encoding.unsupported"
-    ) {
-      res
-        .status(400)
-        .json({ error: "Send a valid JSON request without compression." });
-      return;
-    }
-    console.error(
-      JSON.stringify({
-        event: "request-failed",
-        code: error?.code || "internal",
-      }),
-    );
-    res.status(503).json({ error: "This service is temporarily unavailable." });
-  };
-  app.use(errors);
   const port = Number(process.env.PORT || 3000);
   if (!Number.isInteger(port) || port < 1 || port > 65535)
     throw new Error("PORT must be a valid TCP port.");
