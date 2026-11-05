@@ -9,7 +9,7 @@ test("the Vercel handler serves API responses and applies JSON errors without st
   for (const name of names) delete process.env[name];
   process.env.VERCEL = "1";
   try {
-    const { default: app } = await import("../api/index");
+    const { default: app } = await import("../server/vercel");
     const server = app.listen(0, "127.0.0.1");
     await new Promise<void>(resolve => server.once("listening", resolve));
     const base = `http://127.0.0.1:${(server.address() as AddressInfo).port}`;
